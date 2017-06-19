@@ -11,11 +11,13 @@ return [0, 1].
  **/
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 using namespace std;
 
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+  /*
+  vector<int> twoSums(vector<int>& nums, int target) {
       for(int i=0;i<nums.size();i++){
 	for(int j=0;j<nums.size();j++){
 	  if(target==nums[i]+nums[j]&&i!=j){
@@ -27,7 +29,25 @@ public:
 	  }
 	}
       }
+      }*/
+  vector<int> twoSum(vector<int>& nums,int target){
+    unordered_map<int, int> arry;
+    for(int i=0;i<nums.size();i++){
+      pair<int, int> together (nums[i],i);
+      arry.insert(together);
     }
+    for(int i=0;i<nums.size();i++){
+      int difference=target-nums[i];
+      unordered_map<int, int>::iterator it;
+      it=arry.find(difference);
+      if(it!=arry.end() && i!=it->second){
+	vector<int> ans;
+	ans.push_back(i);
+	ans.push_back(it->second);
+	return ans;
+	}
+    }
+  }
 };
 
 int main(){
