@@ -32,10 +32,12 @@ public:
       }*/
   vector<int> twoSum(vector<int>& nums,int target){
     unordered_map<int, int> arry;
+    //Inserting values into hashed
     for(int i=0;i<nums.size();i++){
       pair<int, int> together (nums[i],i);
       arry.insert(together);
     }
+    //searching to see if the difference are in the loop
     for(int i=0;i<nums.size();i++){
       int difference=target-nums[i];
       unordered_map<int, int>::iterator it;

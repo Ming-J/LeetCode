@@ -1,0 +1,30 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+class Solution{
+public:
+  string converToBase(int num){
+    int power=1;
+    int value=7;
+    int reminder=0;
+    ostringstream oss;
+    string ans;
+    while(num>0){
+      value=num/7;
+      reminder=num%7;
+      cout<<value<<" "<<reminder<<endl;
+      num=value;
+      ans=oss.str();
+      oss<<reminder<<ans;
+      //answer=oss+answer;
+    }
+    cout<<oss.str()<<num<<endl;
+    return oss.str();
+  }
+};
+
+int main(){
+  Solution testing;
+  testing.converToBase(100);
+}
