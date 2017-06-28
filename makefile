@@ -1,2 +1,5 @@
 clean:
-	rm *.*~ *.out *.exe
+	rm *.*~ *.out
+
+cleanwin:
+	rm *.exe
