@@ -17,13 +17,14 @@ public:
     cout<<bitstring<<endl;
     int complement=0;
     int base2=0;
-    for(int i=0;i<bitstring.length();i++){
+    int powercounter=0;
+    for(int i=bitstring.length()-1;i>=0;i--){
       if(bitstring[i]=='1'){
-	if(i==bitstring.length()-1){
+	if(powercounter==0){
 	  complement=complement+1;
 	}else{
 	  base2=1;
-	  int counter=bitstring.length()-i;
+	  int counter=powercounter;
 	  while(counter>0){
 	    base2=base2*2;
 	    counter--;
@@ -31,6 +32,7 @@ public:
 	}
 	complement=complement+base2;
       }
+      powercounter++;
     }
     return complement;
   }
