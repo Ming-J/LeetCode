@@ -3,26 +3,30 @@ Time Complexity: O(N)
 Space Complexity: O(2)
 
 Using an extra vector to store the number in the num vector
-and the find the missing numbery
+and the find the missing number
 ========================================================== */
 #include <iostream>
 #include <vector>
+#include <cmath>
 using namespace std;
 
 class Solution{
 public:
   vector<int> findDisappearedNumbers(vector<int>& nums){
-    vector<int> temp (nums.size(),0);
     for(int i=0;i<nums.size();i++){
-      temp[nums[i]-1]=1;
-    }
-    vector<int> result;
-    for(int i=0;i<temp.size();i++){
-      if(temp[i]==0){
-	result.push_back(i+1);
+      int pos= abs(nums[i])-1;
+      if(nums[pos]>0){
+	nums[pos]=nums[pos]*-1;
       }
     }
-    return result;
+    int numSize=nums.size();
+    for(int i=0;i<numSize;i++){
+      if(nums[i]>0){
+	nums.push_back(i+1);
+      }
+    }
+    nums.erase(nums.begin(),nums.begin()+numSize);
+    return nums;
   }
 };
 
