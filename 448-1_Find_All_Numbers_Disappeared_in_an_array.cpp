@@ -1,9 +1,10 @@
 /*========================================================
 Time Complexity: O(N)
-Space Complexity: O(2)
+Space Complexity: O(1)
 
-Using an extra vector to store the number in the num vector
-and the find the missing number
+Going through the array. Making the value appeared in the array
+negative. Going through the array again, if the value in current
+position is not negitvie, we can assume the index has not appear.
 ========================================================== */
 #include <iostream>
 #include <vector>
