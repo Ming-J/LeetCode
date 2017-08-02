@@ -1,2 +1,5 @@
 * TODO Binary Search for 38
-  
+  |   # | Title                                          | Difficulty | Date   |
+  |-----+------------------------------------------------+------------+--------|
+  | 136 | Single Number                                  | Easy       | 8/2/17 |
+  |   3 | Longest Substring Without Repeating Characters | Medium     | 8/1/17 |
