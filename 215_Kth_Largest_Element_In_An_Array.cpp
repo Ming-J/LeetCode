@@ -10,7 +10,9 @@ public:
   }
 
   void buildheap(vector<int>& nums){
-    
+    for(int i=nums.size()/2;i>0,i--){
+
+    }
   }
 
   void heapify(vector<int>& nums, int i){
@@ -26,7 +28,10 @@ public:
       largestIndex=right;
     }
     if(largest!=i){
-      
+      int temp=nums[largest];
+      nums[largest]=nums[i];
+      nums[i]=temp;
+      heapify(nums,largest);
     }
   }
 
