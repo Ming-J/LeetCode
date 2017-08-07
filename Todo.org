@@ -3,3 +3,5 @@
   |-----+------------------------------------------------+------------+--------|
   | 136 | Single Number                                  | Easy       | 8/2/17 |
   |   3 | Longest Substring Without Repeating Characters | Medium     | 8/1/17 |
+  | 215 | Kth Largest Element In An Array                | Medium     | 8/5/17 |
+  | 643 | Maximum Average Subarray I                     | Medium     | 8/6/17 |

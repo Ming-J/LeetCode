@@ -1,3 +1,5 @@
+/*
+ */
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -5,58 +7,63 @@ using namespace std;
 class Solution{
 public:
   int findKthLargest(vector<int>& nums, int k){
-    cout<<k<<endl;
-    return 0;
+    heapsort(nums);
+    return nums[k-1];
   }
 
+  void heapsort(vector<int>& nums){
+    buildheap(nums);
+    for(int i=nums.size()-1;i>=0;i--){
+      int tmp=nums[i];
+      nums[i]=nums[0];
+      nums[0]=tmp;
+      heapify(nums,i,0);
+    }
+  }
+  
   void buildheap(vector<int>& nums){
-    for(int i=nums.size()/2;i>0,i--){
-
+    for(int i=(nums.size()-2)/2;i>=0;i--){
+      //cout<<i<<endl;
+      heapify(nums,nums.size(),i);
     }
   }
 
-  void heapify(vector<int>& nums, int i){
-    int left=left(nums,i);
-    int right=right(nums,i);
+  void heapify(vector<int>& nums,int size, int i){
+    //cout<<i<<endl;
+    if(i<0){return;}
+    int le=left(i);
+    int ri=right(i);
     int largestIndex=0;
-    if(left<=nums.size()&&nums[left]>nums[i]){
-      largestIndex=left;
+    if(le<size&&nums[le]>nums[i]){
+      largestIndex=le;
     }else{
       largestIndex=i;
     }
-    if(right<=nums.size()&&nums[right]>nums[i]){
-      largestIndex=right;
+    if(ri<size&&nums[ri]>nums[largestIndex]){
+      largestIndex=ri;
     }
-    if(largest!=i){
-      int temp=nums[largest];
-      nums[largest]=nums[i];
+    if(largestIndex!=i){
+      int temp=nums[largestIndex];
+      nums[largestIndex]=nums[i];
       nums[i]=temp;
-      heapify(nums,largest);
+      heapify(nums,size,largestIndex);
     }
   }
 
   int parent(vector<int>& nums, int i){
-    if(i==0){
-      return NULL;
+    if(i%2==0){
+      return i/2-1;
     }else{
-      return (i-1)/2;
+      return i/2;
     }
   }
 
-  int left(vector<int>& nums, int i){
-    if(2*i+1<=nums.size()){
-      return 2*1+1;
-    }else{
-      return NULL;
-    }
+  int left(int i){
+      return 2*i+1;
   }
 
-  int right(vector<int>& nums, int i){
-    if(2*i+2<=nums.size()){
-      return 2*1+2;
-    }else{
-      return NULL;
-    }
+  int right(int i){
+      return 2*i+2;
   }
 };
 
