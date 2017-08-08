@@ -9,19 +9,14 @@ public:
     if(size==0||size==1){
       return size;
     }
-    int current=nums[0];
-    int count=0;
+    int index=0;
     for(int i=1;i<nums.size();i++){
-      if(current==nums[i]){
+      if(nums[index]==nums[i]){
 	size--;
       }else{
-	current=nums[i];
-	count++;
+	index++;
+	nums[index]=nums[i];
       }
-      nums[count]=nums[i];
-    }
-    for(int i=0;i<size;i++){
-      cout<<nums[i]<<endl;
     }
     return size;
   }
