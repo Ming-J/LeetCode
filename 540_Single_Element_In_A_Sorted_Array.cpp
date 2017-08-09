@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -5,15 +6,38 @@ using namespace std;
 class Solution{
 public:
   int singleNonDuplicate(vector<int>& nums){
-    if(nums.size()==1){
+    int length=nums.size();
+    if(length==1){
       return nums[0];
     }
-    for(int i=0;i<nums.size();i+=2){
-      if(nums[i]!=nums[i+1]){
-	return nums[i];
+    int low=0;
+    int high=nums.size()-1;
+    while(high>low){
+      int mid=(low+high)/2;
+      cout<<"a"<<mid<<endl;
+      if(nums[mid]==nums[mid-1]){
+	if((mid-2-low+1)%2==0){
+	  low=mid+1;
+	}else{
+	  high=mid-2;
+	}
+      }else if(nums[mid]==nums[mid+1]){
+	if((mid-1-low+1)%2==0){
+	  low=mid+2;
+	}else{
+	  high=mid-1;
+	}
+      }else{
+	return nums[mid];
       }
     }
-    return nums[nums.size()-1];
+    return nums[low];
+    // for(int i=0;i<nums.size();i+=2){
+    //  if(nums[i]!=nums[i+1]){
+    //	return nums[i];
+    //  }
+    //}
+    //return nums[nums.size()-1];
   }
 };
 
