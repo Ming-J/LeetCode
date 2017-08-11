@@ -2,4 +2,4 @@ clean:
 	rm *.*~ *.out
 
 cleanwin:
-	rm *.exe
+	rm *.*~ *.exe
