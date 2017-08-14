@@ -1,8 +1,13 @@
 * TODO Binary Search for 38
-  |   # | Title                                          | Difficulty | Date   |
-  |-----+------------------------------------------------+------------+--------|
-  | 136 | Single Number                                  | Easy       | 8/2/17 |
-  |   3 | Longest Substring Without Repeating Characters | Medium     | 8/1/17 |
-  | 215 | Kth Largest Element In An Array                | Medium     | 8/5/17 |
-  | 643 | Maximum Average Subarray I                     | Medium     | 8/6/17 |
-  |  26 | Remove Duplicates From Sorted Array            | Easy       | 8/7/17 |
+  |   # | Title                                          | Difficulty | Date    |
+  |-----+------------------------------------------------+------------+---------|
+  | 136 | Single Number                                  | Easy       | 8/2/17  |
+  |   3 | Longest Substring Without Repeating Characters | Medium     | 8/1/17  |
+  | 215 | Kth Largest Element In An Array                | Medium     | 8/5/17  |
+  | 643 | Maximum Average Subarray I                     | Medium     | 8/6/17  |
+  |  26 | Remove Duplicates From Sorted Array            | Easy       | 8/7/17  |
+  | 540 | Single Element In A Sorted Array               | Medium     | 8/8/17  |
+  | 242 | Valid Anagram                                  | Easy       | 8/10/17 |
+  | 515 | Find Largest Value In Each Tree                | Medium     | 8/11/17 |
+  | 530 | Minimum Absolute Difference In BST             | Easy       | 8/12/17 |
+  |     |                                                |            |         |
