@@ -1,18 +1,30 @@
 #include <iostream>
 #include <vector>
-#include <unordered_set>
+#include <unordered_map>
 using namespace std;
 
 class Solution{
 public:
   vector<int> intersection(vector<int> nums1, vector<int>& nums2){
-    unordered_map<int> hash;
+    unordered_map<int,int> hash;
+    vector<int> out;
     for(int i=0;i<nums1.size();i++){
-      hash.insert(nums[i]);
+      hash[nums1[i]]=0;
     }
     for(int i=0;i<nums2.size();i++){
-      hash
+      unordered_map<int,int>:: iterator it;
+      it=hash.find(nums2[i]);
+      if(it!=hash.end()){
+	if(it->second==0){
+	  out.push_back(nums2[i]);
+	  hash[nums2[i]]=1;
+	}
+      }
     }
+    // for(int i=0;i<out.size();i++){
+    //  cout<<out[i]<<endl;
+    //}
+    return out;
   }
 };
 
