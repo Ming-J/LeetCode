@@ -10,4 +10,15 @@
   | 242 | Valid Anagram                                  | Easy       | 8/10/17 |
   | 515 | Find Largest Value In Each Tree                | Medium     | 8/11/17 |
   | 530 | Minimum Absolute Difference In BST             | Easy       | 8/12/17 |
-  |     |                                                |            |         |
+  | 349 | Intersection Of Two Array                      |            | 8/16/17 |
+  | 219 | Contains Duplicate II                          |            | 8/17/17 |
+  |  58 | Length Of Last Word                            |            | 8/17/17 |
+  |   4 | Median Of Two Sorted Array                     |            | 8/17/17 |
+  |   7 | Reverse Integer                                |            | 8/19/17 |
+  |  20 | Valid Parentheses                              |            | 8/19/17 |
+  | 344 | Reverse String                                 |            | 8/20/17 |
+  | 144 | Binary Tree Preorder Traversal                 |            | 8/21/17 |
+  |  74 | Search A 2D Matrix                             |            | 8/23/17 |
+  | 257 | Binary Tree Path                               |            | 8/24/17 |
+  |  54 | Sprial Matrix                                  |            | 8/25/17 |
+  |  14 | Longest Common Prefix                          | Easy       | 8/29/17 |
