@@ -21,8 +21,9 @@ public:
       temp.push_back(root);
       while(!temp.empty()){
 	vector<int> row;
+	int rowSize=temp.size();
 	if(rowNumber%2==0){
-	  for(int i=0;i<temp.size();i++){
+	  for(int i=0;i<rowSize;i++){
 	    TreeNode* behind=temp.back();
 	    row.push_back(behind->val);
 	    temp.pop_back();
@@ -34,7 +35,7 @@ public:
 	    }
 	  }
 	}else{
-	  for(int i=0;i<temp.size();i++){
+	  for(int i=0;i<rowSize;i++){
 	    TreeNode* front=temp.front();
 	    row.push_back(front->val);
 	    temp.pop_front();
