@@ -6,17 +6,19 @@ class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
       k=k%nums.size();
-      int index=k;
-      int temp=nums[k];
-      do{
-	if(index==k){
-	  nums[index]=nums[0];
-	}else{
-	  int store=nums[index];
-	  nums[index]=temp;
-	  temp=store;
-	}
-	index=(index+k)%nums.size();
-      }while(index!=k);
+      vector<int> temp(nums.begin(),nums.end());
+      int index=0;
+      for(int i=temp.size()-k;i<temp.size();i++){
+	nums[index]=temp[i];
+	index++;
+      }
+      for(int i=0;i<temp.size()-k;i++){
+	nums[index]=temp[i];
+	index++;
+      }
     }
 };
+
+int main(){
+  cout<<"Hello World"<<endl;
+}
