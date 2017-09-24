@@ -1,52 +1,25 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <cmath>
 using namespace std;
-
-struct house{
-  int index;
-  int stash;
-  house(int s, int i){
-    stash=s;
-    index=i;
-  }
-  bool operator<(const house& rhs)const {
-    return stash<rhs.stash;
-  }
-};
-
 
 class Solution {
 public:
   int rob(vector<int>& nums) {
-    if(nums.size()==1){return nums[0];};
-    int robbery=0;
-    vector<house> arr;
+    //Edge Case
+    if(nums.size()==0){return 0;}
+    vector<int> stash;
+    //Creating DP array with 2 Base Case
     for(int i=0;i<nums.size();i++){
-      arr.push_back(house(nums[i],i));
-    }
-    sort(arr.begin(),arr.end());
-    vector<bool> visited(false,nums.size());
-    for(int j=0;j<arr.size();j++){
-      int i=arr[j].index;
       if(i==0){
-	if(!visited[i+1]){
-	  robbery+=arr[j].stash;
-	  visited[i]=true;
-	}
-      }else if(i==nums.size()-1){
-	if(!visited[i-1]){
-	  robbery+=arr[j].stash;
-	  visited[i]=true;
-	}
+	stash.push_back(nums[i]);
+      }else if(i==1){
+	stash.push_back(max(nums[1],nums[0]));
       }else{
-	if(!visited[i+1]&&!visited[i-1]){
-	  robbery+=arr[j].stash;
-	  visited[i]=true;
-	}
-      }     
-    }      
-    return robbery;
+	stash.push_back(max(stash[i-1],stash[i-2]+nums[i]));
+      }
+    }
+    return stash[nums.size()-1];
   }
 };
 

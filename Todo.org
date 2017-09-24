@@ -10,15 +10,33 @@
   | 242 | Valid Anagram                                  | Easy       | 8/10/17 |
   | 515 | Find Largest Value In Each Tree                | Medium     | 8/11/17 |
   | 530 | Minimum Absolute Difference In BST             | Easy       | 8/12/17 |
-  | 349 | Intersection Of Two Array                      |            | 8/16/17 |
-  | 219 | Contains Duplicate II                          |            | 8/17/17 |
-  |  58 | Length Of Last Word                            |            | 8/17/17 |
-  |   4 | Median Of Two Sorted Array                     |            | 8/17/17 |
-  |   7 | Reverse Integer                                |            | 8/19/17 |
-  |  20 | Valid Parentheses                              |            | 8/19/17 |
-  | 344 | Reverse String                                 |            | 8/20/17 |
-  | 144 | Binary Tree Preorder Traversal                 |            | 8/21/17 |
-  |  74 | Search A 2D Matrix                             |            | 8/23/17 |
-  | 257 | Binary Tree Path                               |            | 8/24/17 |
-  |  54 | Sprial Matrix                                  |            | 8/25/17 |
+  | 349 | Intersection Of Two Array                      | Easy       | 8/16/17 |
+  | 219 | Contains Duplicate II                          | Easy       | 8/17/17 |
+  |  58 | Length Of Last Word                            | Easy       | 8/17/17 |
+  |   4 | Median Of Two Sorted Array                     | Hard       | 8/17/17 |
+  |   7 | Reverse Integer                                | Easy       | 8/19/17 |
+  |  20 | Valid Parentheses                              | Easy       | 8/19/17 |
+  | 344 | Reverse String                                 | Easy       | 8/20/17 |
+  | 144 | Binary Tree Preorder Traversal                 | Medium     | 8/21/17 |
+  |  74 | Search A 2D Matrix                             | Medium     | 8/23/17 |
+  | 257 | Binary Tree Path                               | Easy       | 8/24/17 |
+  |  54 | Sprial Matrix                                  | Medium     | 8/25/17 |
   |  14 | Longest Common Prefix                          | Easy       | 8/29/17 |
+  |  92 | Reverse_Linked_List_II                         | Medium     | 8/30/17 |
+  | 160 | Intersection Of Two Linked                     | Easy       | 9/2/17  |
+  |  33 | Search In Rotated Sorted Array                 | Medium     | 9/2/17  |
+  | 217 | Contains Duplicate                             | Easy       | 9/11/17 |
+  | 507 | Prefect Number                                 | Easy       | 9/13/17 |
+  | 189 | Rotate Array                                   | Easy       | 9/13/17 |
+  | 103 | Binary Tree Zigzag Level Order Traversal       | Medium     | 9/13/17 |
+  | 111 | Minimum Depth Of Binary Tree                   | Easy       | 9/17/17 |
+  |  98 | Validate Binary Search Tree                    | Medium     | 9/17/17 |
+  | 151 | Reverse Words In A String                      | Medium     | 9/19/17 |
+  |  47 | Permutation II                                 | Medium     | 9/22/17 |
+  |  46 | Permuatation                                   | Medium     | 9/22/17 |
+  |  70 | Climbing Stairs                                | Easy       | 9/22/17 |
+  | 382 | Linked List Random Node                        | Medium     | 9/22/17 |
+  | 198 | House Robber                                   | Easy       | 9/24/17 |
+  | 458 | Poor Pigs                                      | Easy       | 9/24/17 |
+  |  27 | Remove Element                                 | Easy       | 9/24/17 |
+  |  80 | Remove Duplicates From Sorted Array II         | Medium     | 9/24/17 |
