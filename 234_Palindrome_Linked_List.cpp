@@ -12,6 +12,8 @@ class Solution {
 public:
     bool isPalindrome(ListNode* head) {
       string palin="";
+      ListNode* fast=head;
+      ListNode* slow=head;
       while(head!=NULL){
 	palin+=head->val;
 	head=head->next;
