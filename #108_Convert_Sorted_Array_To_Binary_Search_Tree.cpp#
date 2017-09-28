@@ -17,15 +17,13 @@ public:
     return root;
   }
   TreeNode* BSTHelper(vector<int>& nums, int lo, int hi){
-    if(lo>hi){
-      return NULL;
-    }else{
+    if(hi>=lo){
       int mid=lo+(hi-lo)/2;
-      TreeNode root=TreeNode(nums[mid]);
-      TreeNode* poi=&root;
-      poi->left=BSTHelper(nums,lo,mid-1);
-      poi->right=BSTHelper(nums,mid+1,hi);
-      return poi;
+      TreeNode* root= new TreeNode(nums[mid]);
+      root->left=BSTHelper(nums,lo,mid-1);
+      root->right=BSTHelper(nums,mid+1,hi);
+      return root;
     }
+    return NULL;
   }
 };
