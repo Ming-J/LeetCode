@@ -10,21 +10,27 @@ public:
     }
     int pre=0;
     int pos=0;
-    for(int i=1;i<nums.size()-1;i++){
+    bool maxFlag=false;
+    for(int i=0;i<nums.size()-1;i++){
       if(nums[i]>nums[i+1]){
-	pre++;
 	pos=i;
+	pre++;
       }
     }
     if(pre>1){return false;}
     if(pre==0){return true;}
     if(pre==1){
-      if(pos==0){
+      if(pos==0||pos==nums.size()-2){
 	return true;
       }
       if(nums[pos+1]-nums[pos-1]>=0){
 	return true;
-      }else{return false;}
+      }else{
+	if(nums[pos+2]-num[pos]>=0){
+	  return true;
+	}
+	return false;
+      }
     }
   }
 };
