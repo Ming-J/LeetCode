@@ -17,10 +17,11 @@ public:
       if(nums[i]>nums[i-1]){
 	count++;
       }else{
-	max1=max(count,max);
-	count++;
+	max1=max(count,max1);
+	count=1;
       }
     }
-    return max;
+    max1=max(count,max1);
+    return max1;
   }
 };
