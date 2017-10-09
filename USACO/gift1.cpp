@@ -29,17 +29,17 @@ public:
   }
   void print(string filename){
     ofstream myfile;
-    myfile.open(filename);
+    myfile.open(filename.c_str());
     for(int i=0;i<name.size();i++){
       string line=name[i]+" "+to_string(wallet[i]);  
-      myfile<<line<<endl;
+      myfile<<line.c_str()<<endl;
     }
     myfile.close();
   }
 };
 
 int main(){
-  ifstream myfile("gift.in");
+  ifstream myfile("gift1.in");
   string line;
   getline(myfile,line);
   istringstream iss(line);
@@ -52,7 +52,7 @@ int main(){
     NP.addName(line);
   }
   int split;
-  int peopleToSplite;/*
+  int peopleToSplite;
   while(getline(myfile,line)){
     split=0;
     peopleToSplite=0;
@@ -69,7 +69,7 @@ int main(){
       NP.modifyWallet(money,split/peopleToSplite);
       cout<<split/peopleToSplite<<" "<<split<<" "<<peopleToSplite<<endl;
     }
-    }*/
+  }
   myfile.close();
   NP.print("gift1.out");
   return 0;
