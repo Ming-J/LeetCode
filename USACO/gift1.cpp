@@ -1,7 +1,7 @@
 /*
 ID:mingjou1
 PROG: gift1
-LANG: C++
+LANG: C++11
  */
 #include <iostream>
 #include <vector>
@@ -46,7 +46,6 @@ int main(){
   int numberOfpeople;
   iss>>numberOfpeople;
   gift NP;
-  cout<<numberOfpeople;
   for(int i=0;i<numberOfpeople;i++){
     getline(myfile,line);
     NP.addName(line);
@@ -67,7 +66,6 @@ int main(){
     for(int i=0;i<peopleToSplite;i++){
       getline(myfile,money);
       NP.modifyWallet(money,split/peopleToSplite);
-      cout<<split/peopleToSplite<<" "<<split<<" "<<peopleToSplite<<endl;
     }
   }
   myfile.close();
