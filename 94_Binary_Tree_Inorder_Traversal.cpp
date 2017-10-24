@@ -10,7 +10,8 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-
+/*inorder traversal not using recursion using stack
+ */
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
@@ -18,18 +19,15 @@ public:
       if(root==NULL){return ans;}
       stack<TreeNode*> deck;
       TreeNode* cur=root;
-      deck.push(root);
-      while(!deck.empty()){
-	if(cur->left!=NULL){
-	  deck.push(cur->left);
+      while(!deck.empty()||cur){
+	if(cur!=NULL){
+	  deck.push(cur);
 	  cur=cur->left;
 	}else{
-	  cur=deck.top();
-	  deck.pop();
-	  ans.push_back(cur->val);
-	  if(cur->right!=NULL){
+	    cur=deck.top();
+	    ans.push_back(cur->val);
+	    deck.pop();
 	    cur=cur->right;
-	  }
 	}
       }
       return ans;
