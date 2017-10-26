@@ -16,21 +16,12 @@ public:
 	sort(i->second.begin(),i->second.end());
       }
       string dep="JFK";
-      /*ans.push_back(dep);
-      while(!hash.empty()){
-	string arr=hash[dep][0];
-	hash[dep].erase(hash[dep].begin());
-	if(hash[dep].size()==0){
-	  hash.erase(dep);
-	}
-	ans.push_back(arr);
-	dep=arr;
-	}*/
+      ans.push_back(dep);
       dfs(ans,hash,tickets.size()+1,dep);
-      for(int i=0;i<ans.size();i++){
+      /*for(int i=0;i<ans.size();i++){
 	cout<<ans[i]<<endl;
-      }
-      for(auto i=hash.begin();i!=hash.begin();i++){
+	}*/
+      for(auto i=hash.begin();i!=hash.end();i++){
 	for(int j=0;j<hash[i->first].size();j++){
 	  cout<<i->first<<" "<<hash[i->first][j]<<endl;
 	}
@@ -47,6 +38,7 @@ public:
       return;
     }else{
       if(hash.find(departure)!=hash.end()){
+	cout<<dep<<endl;
         for(int i=0;i<hash[departure].size();i++){
 	  string arrival=hash[departure][i];
 	  hash[departure].erase(hash[departure].begin()+i);
