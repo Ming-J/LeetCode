@@ -16,7 +16,7 @@ public:
 	sort(i->second.begin(),i->second.end());
       }
       string dep="JFK";
-      ans.push_back(dep);
+      /*ans.push_back(dep);
       while(!hash.empty()){
 	string arr=hash[dep][0];
 	hash[dep].erase(hash[dep].begin());
@@ -25,7 +25,8 @@ public:
 	}
 	ans.push_back(arr);
 	dep=arr;
-      }
+	}*/
+      dfs(ans,hash,tickets.size()+1,dep);
       for(int i=0;i<ans.size();i++){
 	cout<<ans[i]<<endl;
       }
@@ -36,4 +37,27 @@ public:
       }
       return ans;
     }
+  void dfs(vector<string>& iternery,
+	   unordered_map<string,vector<string> >& hash,
+	   int n, string departure){
+    if(n==iternery.size()){
+      for(int i=0;i<iternery.size();i++){
+	cout<<iternery[i]<<endl;
+      }
+      return;
+    }else{
+      if(hash.find(departure)!=hash.end()){
+        for(int i=0;i<hash[departure].size();i++){
+	  string arrival=hash[departure][i];
+	  hash[departure].erase(hash[departure].begin()+i);
+	  iternery.push_back(arrival);
+	  dfs(iternery,hash,n,arrival);
+	  iternery.pop_back();
+	  hash[departure].insert(hash[departure].begin()+1,arrival);
+	}
+      }else{
+	return;
+      }
+    }
+  }
 };
