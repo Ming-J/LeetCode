@@ -2,6 +2,7 @@
 #include <vector>
 #include <unordered_map>
 #include <algorithm>
+#include <stack>
 using namespace std;
 
 class Solution {
@@ -31,24 +32,19 @@ public:
   void dfs(vector<string>& iternery,
 	   unordered_map<string,vector<string> >& hash,
 	   int n, string departure){
-    if(n==iternery.size()){
-      for(int i=0;i<iternery.size();i++){
-	cout<<iternery[i]<<endl;
-      }
-      return;
-    }else{
+    //stack<string> deck;
+    //deck.push(arrival);
+    while(!hash.empty()){
       if(hash.find(departure)!=hash.end()){
-	cout<<dep<<endl;
-        for(int i=0;i<hash[departure].size();i++){
-	  string arrival=hash[departure][i];
-	  hash[departure].erase(hash[departure].begin()+i);
-	  iternery.push_back(arrival);
-	  dfs(iternery,hash,n,arrival);
-	  iternery.pop_back();
-	  hash[departure].insert(hash[departure].begin()+1,arrival);
-	}
+	string arrival=*hash[departure].begin();
+	iternery.push_back(arrival);
+	hash[departure].erase(hash[departure].begin());
+	departure=arrival;
       }else{
-	return;
+	string arr=iternery.back();
+	iternery.pop_back();
+	string dep=iternery.back();
+	hash[dep].push_back(arr);
       }
     }
   }
