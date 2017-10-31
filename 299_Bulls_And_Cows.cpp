@@ -5,33 +5,40 @@ using namespace std;
 class Solution {
 public:
     string getHint(string secret, string guess) {
-      int a=0,b=0;
-      vector<int> hash(guess.size(),0);
-      for(int i=0;i<guess.size();i++){
-	char temp=checkstring(i,guess[i],secret,hash);
-	if(temp=='A'){
-	  a++;
-	}
-	if(temp=='B'){
-	  b++;
-	}
-      }
+      vector<bool> hash(guess.size(),false);
+      int a=checkA(guess,secret,hash);
+      int b=checkB(guess,secret,hash);
       return to_string(a)+'A'+to_string(b)+'B';
     }
 
-  char checkstring(int pos, char n, string secret,vector<int> &hash){
-    if(secret[pos]==n){
-      hash[pos]++;
-      return 'A'; 
-    }else{
-      for(int i=0;i<secret.size();i++){
-	if(i!=pos&&secret[i]==n&&hash[i]==0){
-	  hash[i]++;
-	  return 'B';
+  //checking cow
+  int checkA(string guess, string secret, vector<bool> & flags){
+    int n=0;
+    for(size_t i=0;i<guess.size();i++){
+      if(secret[i]==guess[i]){
+	n++;
+	flags[i]=true;
+      }
+    }
+    return n;
+  }
+  //checking bull
+  int checkB(string guess, string secret,vector<bool> &flags){
+    vector<int> hash(10,0);
+    for(size_t i=0;i<secret.size();i++){
+      if(!flags[i]){
+	hash[secret[i]-'0']++;
+      }
+    }
+    int n=0;
+    for(size_t i=0;i<guess.size();i++){
+      if(!flags[i]){
+	if(hash[guess[i]-'0']-->0){
+	  n++;
 	}
       }
-      return 0;
     }
+    return n;
   }
 };
 
