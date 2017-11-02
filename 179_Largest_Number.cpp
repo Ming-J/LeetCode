@@ -49,8 +49,13 @@ public:
       sort(nums.begin(),nums.end(),compare);
       string result;
       for(int i=0;i<nums.size();i++){
-	result+=to_string(nums[i]);
-	cout<<nums[i]<<endl;
+	if(!result.empty()||nums[i]!=0){
+	  result+=to_string(nums[i]);
+	  //cout<<nums[i]<<endl;
+	}
+      }
+      if(result.empty()){
+	return "0";
       }
       return result;
     }
