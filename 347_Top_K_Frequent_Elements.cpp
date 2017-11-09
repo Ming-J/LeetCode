@@ -9,8 +9,9 @@ Note: You may assume k is always valid, 1 ≤ k ≤ number of unique
 elements.  Your algorithm's time complexity must be better than O(n
 log n), where n is the array's size.
 
-
-Can also use Bucket sort, create a list for each of the frequency
+Can also use Bucket sort, create a list for each of the frequency and
+you would traverse from the end to obtain the element with highest
+frequency.
 */
 #include <iostream>
 #include <vector>
@@ -31,14 +32,16 @@ public:
 	  bucket=max(bucket,hash[nums[i]]);
 	  //increament when the value is already in
       }
-      vector< vector<int> > bucketlist(bucket,vector<int>);
-      vector<pair<int,int>> freq;
+      //creating a bucket with the high frequency
+      vector< vector<int> > bucketlist(bucket,vector<int>({}));
+      //inserting the element in to bucket accourding to their frequency
       for(auto i=hash.begin();i!=hash.end();i++){
 	bucketlist[i->second-1].push_back(i->first);
       }
       vector<int> res;
-      for(int i=bucketlist.size();i>=0;i--){
-	for(int j=bucketlist[i].size();j>=0;j--){
+      //traverse from the element with highest frequent and insert to array
+      for(int i=bucketlist.size()-1;i>=0;i--){
+	for(int j=bucketlist[i].size()-1;j>=0;j--){
 	  if(res.size()<k){
 	    res.push_back(bucketlist[i][j]);
 	  }
@@ -53,7 +56,7 @@ public:
       sort(freq.begin(),freq.end(),
       [](pair<int,int> lhs,pair<int,int> rhs){return lhs.second>rhs.second;});
       //return the most top k frequent element
-      vector<int> res;
+      //vector<int> res;
       for(int i=0;i<k;i++){
 	res.push_back(freq[i].first);
       }
