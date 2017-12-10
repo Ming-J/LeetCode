@@ -1,7 +1,11 @@
 #include <iostream>
 #include <stack>
 using namespace std;
-
+/*
+Solved this problem iteratively using stack. One stack to keep track
+of number and another on to keep tack of string and iterating through
+the screen.
+*/
 class Solution{
 public:
   string decodeString(string s){
