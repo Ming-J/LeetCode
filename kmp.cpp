@@ -14,14 +14,13 @@ public:
     partialTable.assign(pattern.size(),0);
   }
   void getPartialTable(){
+    /*define the size of the largest prefix of pattern that is also
+      the suffix, avoid backtracking*/
     partialTable[0]=0;
     int k=0;
     for(int i=1;i<partialTable.size();i++){
-      //int k = partialTable[i-1];
-      cout<<k<<' '<<i<<endl;
       while(k>0&&pattern[k]!=pattern[i]){
 	k=partialTable[k-1];
-	cout<<"K::"<<k<<endl;
       }
       if(pattern[k]==pattern[i]){
 	k++;
@@ -34,12 +33,29 @@ public:
     cout<<endl;
     for(int i=0;i<partialTable.size();i++){
       cout<<partialTable[i];
+    }   
+  }
+  void search(){
+    getPartialTable();
+    int m=0; //Number of char matched in pattern
+    for(int i=0;i<txt.size();i++){
+      while(m>0&&txt[i]!=pattern[m]){
+	m=partialTable[m-1];
+      }
+      if(txt[i]==pattern[m]){
+	m++;
+	if(m==pattern.size()){
+	  cout<<"Match Found at position"<<i<<endl;
+	  m=partialTable[m-1];
+	}
+      } 
     }
   }
+  
 };
 
 int main(){
-  kmp stringcheck("bacbababaabcbab","abababca");
-  stringcheck.getPartialTable();
+  kmp stringcheck("abcabdabcabdabcabcabdabc","abcabdabc");
+  stringcheck.search();
   return 0;
 }
