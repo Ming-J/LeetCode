@@ -19,7 +19,7 @@ public:
 	sum+=hash[i]-1;
       }
     }
-    if(oddCount>0){sum--};
+    if(oddCount>0){sum++};
     return sum;
   }
 };
