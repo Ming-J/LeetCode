@@ -15,16 +15,16 @@ public:
 	int mid=lo+(hi-lo)/2;
 	bool midB=isBadVersion(mid);
 	if(midB){
-	  if(isBadVersion(mid-1)){
+	  if(!isBadVersion(mid-1)){
 	    return mid;
 	  }else{
 	    hi=mid-1;
 	  }
 	}else{
 	  if(isBadVersion(mid+1)){
-	    lo=mid+1;
+	    return mid+1;
 	  }else{
-	    return mid;
+	    lo=mid+1;
 	  }
 	}
       }
