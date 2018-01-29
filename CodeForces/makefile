@@ -1,3 +1,4 @@
+
 clean:
 	rm *.*~ *.out
 
@@ -5,4 +6,5 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump
 
 compile:
-	g++ 515_Find_Largest_Value_In_Each_Tree_Row.cpp
+	g++ -std=c++11 0489C_Given_Length_And_Sum_Of_Digits.cpp
+	./a.exe
