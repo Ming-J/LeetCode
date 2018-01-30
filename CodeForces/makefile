@@ -1,10 +1,10 @@
 
 clean:
-	rm *.*~ *.out
+	rm *.*~ *.out makefile~
 
 cleanwin:
-	rm *.*~ *.exe a.exe.stackdump
+	rm *.*~ *.exe a.exe.stackdump makfefile~
 
 compile:
-	g++ -std=c++11 0489C_Given_Length_And_Sum_Of_Digits.cpp
+	g++ -std=c++11 0327A_Flipping_Game.cpp
 	./a.exe
