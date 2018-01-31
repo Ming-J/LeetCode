@@ -12,30 +12,30 @@ public:
       }
     }
     int remind = K % charC;
-    int i = 0;
-    for(;remind>0; i++){
-      if(S[i]!= '-'){
-	remind--;
-	res += S[i];
-      }
-    }
-    res += '-';
-    int hyp = 1;
-    for(; i < S.size() ; i++){
-      if( S[i] != '-'){	
-	hyp++;
-	res += S[i];
-	if(hyp % K == 0){
-	  res += '-';
+    int kcounter = 0;
+    res.resize( charC + (charC-1)/K, '_' );
+    int rezi = res.size() - 1;
+    cout<<res.size()<<' '<<res<<' '<<charC<<endl;
+    for(int i = S.size() - 1; i >= 0; i--){
+      //cout<<S[stri]<<' '<<res[i]<<endl;
+      if(S[i] != '-'){
+	res[rezi] = S[i];
+	kcounter++;
+	rezi--;
+	if( kcounter >= K && kcounter % K == 0){
+	  res[rezi] = '-';
+	  rezi--;
 	}
       }
+      cout<<rezi<<' '<<i<<' '<<res<<' '<<S[i]<<' '<<res[rezi]<<endl;
     }
+    cout<<res<<"ewraw"<<endl;
     return res;
   }
 };
 
 int main(){
-  string S = "2-5g-3-J";
+  string S = "5F3Z-2e-9-w";
   Solution test;
-  cout<<test.licenseKeyFormatting(S,2)<<endl;
+  cout<<test.licenseKeyFormatting(S,4)<<endl;
 }
