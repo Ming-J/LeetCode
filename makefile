@@ -5,5 +5,5 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++11 482_Licence_Key_Formatting.cpp
-	./a.out
+	g++ -std=c++11 688_Knight_Probability_In_Chessboard.cpp
+	./a.exe
