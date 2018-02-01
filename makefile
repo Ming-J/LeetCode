@@ -6,4 +6,4 @@ cleanwin:
 
 compile:
 	g++ -std=c++11 688_Knight_Probability_In_Chessboard.cpp
-	./a.exe
+	./a.out

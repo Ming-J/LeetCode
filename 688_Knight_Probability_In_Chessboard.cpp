@@ -17,7 +17,6 @@ public:
       cout<<endl;
       copyProb(prob,board);
     }
-    //nextMove(board,moves);
     cout<<endl;
     int possible = countMoves(prob);
     print(prob);
@@ -25,7 +24,6 @@ public:
     cout<<allmoves;
     return possible;
   }
-
   bool validmove( int r, int c, int x, int y, int N){
     int newr = r + x;
     int newy = c + y;
@@ -34,7 +32,6 @@ public:
     }
     return false;
   }
-
   void copyProb( vector< vector<int> > &prob, vector< vector<int> > &board){
     for( int i = 0; i < board.size(); i++){
       for( int j = 0; j < board[i].size(); j++){
@@ -44,7 +41,6 @@ public:
       }
     }
   }
-
   int countMoves( vector< vector<int> > &board){
     int cnt = 0;
     for( int i = 0; i < board.size(); i++){
@@ -57,7 +53,7 @@ public:
     return cnt;
   }
 
-  void nextMove( vector< vector<int> > &board, vector< pair<int, int> > moves){
+  void nextMove( vector< vector<int> > &board, vector< pair<int, int> > moves, int &cnt){
     vector<vector<int> > newboard( board.size(), vector<int> (board.size(),0));
     for( int i = 0; i < board.size(); i++){
       for( int j = 0; j < board[i].size(); j++){
@@ -74,7 +70,6 @@ public:
     board = newboard;
     return;
   }
-
   void print( vector< vector<int> > &board){
     for( int i = 0; i < board.size(); i++){
       for( int j = 0; j < board[i].size(); j++){
@@ -82,8 +77,7 @@ public:
       }
       cout<<endl;
     }
-  }
-  
+  }  
 };
 
 
