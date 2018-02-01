@@ -25,12 +25,23 @@ int main(){
     if(boy && girl){
       int bDancer = bskill[i-1] + bskill[i];
       int gDancer = gskill[i-1] + gskill[i];
-      int match = min(bDance,gDance);
-      count + = match;
-      bskill[i-1] = (bskill[i-1] - match > 0)? bskill[i-1] - match : 0;
-      gskill[i-1] = (gskill[i-1] - match > 0)? gskill[i-1] - match : 0;
-      bskill[i] = (bskill[i] - match > 0)? bskill[i-1] - match : 0;
-      boyskill[i-1] = (boyskill[i-1] - match > 0)? boyskill[i-1] - match : 0;
+      int match = min(bDancer,gDancer);
+      count += match;
+      for( int j = 0 ; j < match; j++){
+	if(bskill[i-1]>0){
+	  bskill[i-1]--;
+	}else{
+	  bskill[i]--;
+	}
+      }
+      for( int j = 0 ; j < match; j++){
+	if(gskill[i-1]>0){
+	  gskill[i-1]--;
+	}else{
+	  gskill[i]--;
+	}
+      }
     }
   }
+  cout<<count<<endl;
 }
