@@ -6,5 +6,5 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makfefile~
 
 compile:
-	g++ -std=c++11 0732B_Cormen.cpp
-	./a.exe
+	g++ -std=c++11 0550A_Two_Substrings.cpp
+	./a.out
