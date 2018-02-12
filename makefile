@@ -6,6 +6,6 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++11 139_Word_Break.cpp
-	./a.out
+	g++ -std=c++14 067_Add_Binary.cpp
+	./a.exe
 
