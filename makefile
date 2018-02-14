@@ -6,6 +6,6 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 043_Multiply_Strings.cpp
+	g++ -std=c++14 416_Partition_Equal_Subset_Sum.cpp
 	./a.exe
 
