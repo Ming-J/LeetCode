@@ -6,6 +6,6 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 416_Partition_Equal_Subset_Sum.cpp
-	./a.exe
+	g++ -std=c++14 331_Verify_Preorder_Serialzation_Of_A_Binary_Tree.cpp
+	./a.out
 
