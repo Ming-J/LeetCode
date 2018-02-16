@@ -9,40 +9,41 @@ public:
     bool isValidSerialization(string preorder) {
       stringstream ss(preorder);
       string token;
-      //vector<string> heap;
       stack<string>  deck;
       while(getline(ss, token, ',')){
-	deck.push(token);
-      }
-      while(deck.size()>=3){
-	if(deck.top() == "#"){
-	  deck.pop();
-	  if(deck.top() != "#"){
-	    return false;
-	  }else{
-	    deck.pop();
-	    deck.pop();
-	    deck.push("#");
-	  }
+	if(token == "#"){
+	  checkTop(deck);
 	}else{
-	  return false;
+	  deck.push(token);
 	}
       }
-      return true;
-
-
-
-
-      
-      while(!deck.empty()){
-	cout<<deck.top()<<" ";
-	deck.pop();
-      }
-      if(deck.size() != 1 || deck.top() != "#"){
+      if(deck.size() == 1 && deck.top() == "#"){
+	return true;
+      }else{
 	return false;
       }
-      return true;
     }
+  void printdeck(stack<string> deck){
+    while(!deck.empty()){
+      cout<<deck.top()<<' ';
+      deck.pop();
+    }
+    cout<<endl;
+  }
+  void checkTop(stack<string> &deck){
+    //printdeck(deck);
+    if(deck.size()>1&&deck.top() == "#"){
+      deck.pop();
+      if(deck.top()!="#"){
+	deck.pop();
+	checkTop(deck);
+      }else{
+	deck.push("#");
+      }
+    }else{
+      deck.push("#");
+    }
+  }
 };
 
 

@@ -7,5 +7,5 @@ cleanwin:
 
 compile:
 	g++ -std=c++14 331_Verify_Preorder_Serialzation_Of_A_Binary_Tree.cpp
-	./a.out
+	./a.exe
 
