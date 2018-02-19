@@ -6,6 +6,11 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 331_Verify_Preorder_Serialzation_Of_A_Binary_Tree.cpp
+	g++ -std=c++14 495_Teemo_Attacking.cpp
+	./a.out
+
+compwin:
+	g++ -std=c++14 495_Teemo_Attacking.cpp
 	./a.exe
+
 

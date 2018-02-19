@@ -9,7 +9,7 @@ public:
       for( char c : tasks){
 	cArray[c-'A']++;
       }
-      int 
+      sort(cArray);
       
     }
 };
