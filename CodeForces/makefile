@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++11 0368B_Sereja_And_Suffixes.cpp
+	g++ -std=c++11 0702A_Maximum_Increase.cpp
 	./a.exe
