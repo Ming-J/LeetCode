@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++14 495_Teemo_Attacking.cpp
+	g++ -std=c++14 84_Largest_Rectangle_In_Histogram.cpp
 	./a.exe
 
 

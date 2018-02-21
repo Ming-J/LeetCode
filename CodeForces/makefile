@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++11 0702A_Maximum_Increase.cpp
+	g++ -std=c++11 0476B_Dreamoon_And_Wifi.cpp
 	./a.exe
