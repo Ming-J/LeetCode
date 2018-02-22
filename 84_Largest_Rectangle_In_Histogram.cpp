@@ -9,14 +9,12 @@ public:
     stack<int> deck;
     int area = 0;
     for( int he : heights){
-      if(deck.empty()){
-	deck.push(he);
-      }else{
+      if(!deck.empty()){
 	if(deck.top() >  he){
 	  area = max(area, calculatingArea(deck, he));
 	}
-	deck.push(he);
       }
+      deck.push(he);
     }
     area = max(area, calculatingArea(deck, 0));
     return area;
@@ -30,16 +28,9 @@ public:
       maxArea = max(maxArea, area);
       de.pop();
     }
-    if(de.empty()){
-      while(pop>0){
-	de.push(newVal);
-	pop--;
-      }
-    }else{
-      while(pop>0){
-	de.push(de.top());
-	pop--;
-      }
+    while(pop>0){
+      de.push(newVal);
+      pop--;
     }
     return maxArea;
   }
