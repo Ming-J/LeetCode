@@ -21,7 +21,7 @@ public:
       div = digit;
       return true;
     }
-    if(val == "" || (!digit.empty()&&stoi(digit) >= 1000)){
+    if(val == "" || digit.size() >= 4 ||(!digit.empty()&&stoi(digit) >= 1000)){
       return false;
     }
     return recur(val.substr(1),digit+val[0],div)||recur(val.substr(1),digit,div);
@@ -29,11 +29,17 @@ public:
 
   
   string cal(){
-    int dp[value.size()][8]= {0};
+    int dp[value.size()+1][8]= {0};
     for(size_t i  = 0; i < value.size(); ++i){
-
-      dp[i][value[i] % 8 ] = 1;
+      for(size_t j = 0; j < 8; ++j){
+	if( j == value[i] % 8){
+	  dp[i][j] = 1;
+	}else{
+	  
+	}
+      }
     }
+    
     for( auto &s : dp ){
       for(auto k : s){
 	cout<<k<<' ';
