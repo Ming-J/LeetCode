@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 535_Encode_And_Decode_TinyURL.cpp
+	g++ -std=c++14 743_NetworkDelay.cpp
 	./a.out
 
 compwin:
