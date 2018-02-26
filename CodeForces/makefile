@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++11 0476B_Dreamoon_And_Wifi.cpp
+	g++ -std=c++17 0894A_QAQ.cpp
 	./a.exe

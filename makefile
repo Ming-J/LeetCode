@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++14 84_Largest_Rectangle_In_Histogram.cpp
+	g++ -std=c++17 743_NetworkDelay.cpp
 	./a.exe
 
 
