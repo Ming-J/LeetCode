@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0894A_QAQ.cpp
+	g++ -std=c++17 0698A_Vacations.cpp
 	./a.exe
