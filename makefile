@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 743_NetworkDelay.cpp
+	g++ -std=c++17 395_Longest_Substring_With_At_Least_K_Repeating_Characters.cpp
 	./a.exe
 
 
