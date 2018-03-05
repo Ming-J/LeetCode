@@ -32,20 +32,26 @@ public:
 class Solution {
 public:
   int longestSubstring(string s, int k) {
-    int maxLength = 0;
-    unordered_map<char,int> arr;
-    for( char c : s){
-      arr[c]++;
+    return helper(s,k,0,s.size());
+  }
+  int helper(string s, int k, int start, int end){
+    if(start > end){
+      return 0;
     }
-    bool checkMax = true;
-    for(size_t i = 0; i < s.size(); i++){
-      if(arr[s[i]] < k){
-	checkMax = false;
-	maxLength = max(longestSubstring(s.substr(0,i),k),
-		       longestSubstring(s.substr(i+1),k));
+    unordered_map<char,int> arr;
+    for(size_t i = start; i < end; ++i){
+      arr[s[i]]++;
+    }
+    for(auto cur : arr){
+      if(cur.second < k){
+	for(size_t i = start; i < end; ++i){
+	  if(s[i] == cur.first){
+	    return max(helper(s,k,start,i),helper(s,k,i+1,end));
+	  }
+	}
       }
     }
-    return checkMax? s.size() : maxLength;
+    return end - start;
   }
 };
 
