@@ -1,0 +1,6 @@
+When is it valid to return a reference? A reference with to const?
+
+When a function call is a lvalue. And an existing object that isn't
+going away
+
+const, then we can not assign to result
