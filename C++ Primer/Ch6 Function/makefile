@@ -1,5 +1,5 @@
 compile:
-	g++ -std=c++11 E6_33.cpp
+	g++ -std=c++11 E6_36.cpp
 	./a.out
 
 clean:
