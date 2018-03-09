@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0538B_Quasi_Binary.cpp
+	g++ -std=c++17 0545C_Woodcutters.cpp
 	./a.exe
