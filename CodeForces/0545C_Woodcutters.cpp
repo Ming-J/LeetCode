@@ -45,18 +45,19 @@ int wooddp(vector< pair<int,int> > &woods){
     //falls left
     //check previous fall left
     if( woods[i].first - woods[i].second > woods[i-1].first){
-      dp[i][0] = max(dp[i][0],previous+1);
+      dp[i][0] = max(dp[i][0],max(dp[i-1][0],dp[i-1][2])+1);
     }
     //check previous fall right
-    if( woods[i].first - woods[i].second > woods[i-1].first + woods[i].second){
+    if(woods[i].first-woods[i].second > woods[i-1].first+woods[i-1].second){
       dp[i][0] = max(dp[i][0],dp[i-1][1]+1); 
     }
     //check right
+    //check if next is falling right
     if(woods[i].first + woods[i].second < woods[i+1].first){
-      dp[i][1] = previous + 1;
+      dp[i][1] = max(dp[i][1], previous + 1);
     }
   }
-  return dp[woods.size()-2][1];
+  return max(max(dp[woods.size()-2][0],dp[woods.size()-2][1]),dp[woods.size()-2][2]);
 }
 
 int woodcut(vector< pair<int,int> > woods){
