@@ -12,6 +12,7 @@ struct TreeNode {
 class Solution {
 public:
   void flatten(TreeNode* root) {
+    cout<<root->val<<endl;
     if(root == NULL){
       return;
     }
@@ -26,7 +27,11 @@ public:
     TreeNode* righttemp = root->right;
     root -> right = root -> left;
     root -> left = NULL;
-    leftEnd -> right = righttemp;
-    flatten(root->right);
+    if(leftEnd != NULL){
+      leftEnd -> right = righttemp;
+    }
+    if(root->right != NULL){
+      flatten(root->right);
+    }
   }
 };
