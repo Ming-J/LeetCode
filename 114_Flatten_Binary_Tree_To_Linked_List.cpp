@@ -12,26 +12,21 @@ struct TreeNode {
 class Solution {
 public:
   void flatten(TreeNode* root) {
-    cout<<root->val<<endl;
     if(root == NULL){
       return;
     }
-    TreeNode* leftEnd;
-    if(root->left != NULL){
-      flatten(root->left);
-      leftEnd = root->left;
+    TreeNode* leftEnd=root->left;
+    TreeNode* rightTemp = root->right;
+    flatten(root->left);
+    //traverse to the end of the flatten linked list
+    while(leftEnd!=NULL&&leftEnd->right != NULL){
+      leftEnd = leftEnd -> right;
     }
-    while(leftEnd->right != NULL){
-      leftEnd = leftEnd -> left;
-    }
-    TreeNode* righttemp = root->right;
-    root -> right = root -> left;
-    root -> left = NULL;
     if(leftEnd != NULL){
       leftEnd -> right = righttemp;
+      root -> right = root -> left;
+      root -> left = NULL;
     }
-    if(root->right != NULL){
-      flatten(root->right);
-    }
+    flatten(righttemp);
   }
 };

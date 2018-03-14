@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0545C_Woodcutters.cpp
+	g++ -std=c++17 919B_Prefect_Number.cpp
 	./a.exe
