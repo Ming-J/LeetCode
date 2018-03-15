@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 477_Total_Hamming_Distance.cpp
+	g++ -std=c++14 397_Integer_Replacement.cpp
 	./a.out
 
 compwin:
