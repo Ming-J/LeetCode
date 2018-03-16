@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++11 0545C_Woodcutters.cpp
+	g++ -std=c++14 0431C_K_Tree.cpp
 	./a.out
 
 compwin:

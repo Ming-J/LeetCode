@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+long m = 1e9+7;
 
 void calKtree(int &count,int path, int k, int atLeast, bool add){
   if(path==0){
@@ -16,17 +17,19 @@ void calKtree(int &count,int path, int k, int atLeast, bool add){
 } 
 
 int kTreedp(int path, int kTree, int atLeast){
-  int dp[path+1][2] = {0};
-  dp[0][0] = 0;
+  long dp[path+1][2];
+  dp[0][0] = 1;
   dp[0][1] = 0;
   for( int i = 1; i < path+1; ++i){
+    dp[i][0] = dp[i][1] = 0;
     for( int j = 1; j <= kTree; ++j){
       if(i - j >= 0){
 	if( j < atLeast){
-	  dp[i][0] += dp[i-j][0] + 1;
-	  dp[i][1] += dp[i-j][1];
-	}else{
-	  dp[i][1] += (dp[i-j][1]+(dp[i-j][0] + 1));
+	  dp[i][0] = ((dp[i][0] % m) + (dp[i-j][0] % m))%m;
+	  dp[i][1] = ((dp[i][1] % m) + (dp[i-j][1] % m))%m;
+	}else{			
+	  dp[i][1] = ((dp[i][1] % m) + (dp[i-j][0] % m))%m;
+	  dp[i][1] = ((dp[i][1] % m) + (dp[i-j][1] % m))%m;
 	}
       }
     }
@@ -35,10 +38,10 @@ int kTreedp(int path, int kTree, int atLeast){
 }
 
 int main(){
-  int path=28, kTree=6, atLeast=3;
-  //cin>>path>>kTree>>atLeast;
-  int count = 0;
-  calKtree(count,path,kTree,atLeast,false);
-  cout<<count<<endl;
+  int path=50, kTree=6, atLeast=3;
+  cin>>path>>kTree>>atLeast;
+  //int count = 0;
+  //calKtree(count,path,kTree,atLeast,false);
+  //cout<<count<<endl;
   cout<<kTreedp(path,kTree,atLeast)<<endl;
 }
