@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 397_Integer_Replacement.cpp
+	g++ -std=c++17 048_Rotate_Image.cpp
 	./a.exe
 
 
