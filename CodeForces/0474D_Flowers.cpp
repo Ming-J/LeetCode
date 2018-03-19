@@ -13,6 +13,7 @@ using namespace std;
    WWRR
 */
 int dp[1000000];
+int sumdp[1000000] = {0};
 int preMax = 0;
 int mod = 1e9 + 7;
 int calDp(int k, int first, int last){
@@ -22,15 +23,16 @@ int calDp(int k, int first, int last){
     }else if(preMax == k){
       dp[preMax] = 2;
     }else{
-      dp[preMax] = (dp[preMax-1] % mod + dp[preMax - k] % mod)%mod;
+      dp[preMax] = (dp[preMax-1] + dp[preMax - k])%mod;
     }
+    sumdp[preMax] = (sumdp[preMax-1] + dp[preMax])%mod;
     ++preMax;
   }
-  int sum = 0;
-  for(int i = first; i <= last; ++i){
-    sum =  sum % mod + dp[i] % mod;
-  }
-  return sum%mod;
+  //int sum = 0;
+  //for(int i = first; i <= last; ++i){
+  //  sum =  (sum + dp[i]) % mod;
+  //}
+  return (sumdp[last] - sumdp[first-1]+mod) % mod;
 }
 
 int rec(int k, int n){

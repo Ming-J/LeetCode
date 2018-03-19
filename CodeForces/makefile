@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 474D_Flowers.cpp
+	g++ -std=c++17 0474D_Flowers.cpp
 	./a.exe
