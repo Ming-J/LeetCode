@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 397_Integer_Replacement.cpp
+	g++ -std=c++14 435_Non_Overlapping_Intervals.cpp
 	./a.out
 
 compwin:
