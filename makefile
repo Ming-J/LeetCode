@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 451_sort_Characters_By_Frequency.cpp
+	g++ -std=c++17 494_Target_Sum.cpp
 	./a.exe
 
 
