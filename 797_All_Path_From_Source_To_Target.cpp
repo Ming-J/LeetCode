@@ -5,6 +5,27 @@ using namespace std;
 
 class Solution {
 public:
+  //DFS Version
+  vector< vector<int> > allPathsSourceTargetdfs(vector<vector<int> > & graph){
+    vector< vector<int> > ans;
+    vector<int> path={0};
+    dfs(graph,path,ans);
+    return ans;
+  }
+  void dfs(vector<vector<int> >& graph,vector<int> &path,
+	   vector<vector<int> >& ans){
+    if(path.back()==graph.size() - 1){
+      ans.push_back(path);
+    }else{
+      int val = path.back();
+      for(auto nodes: graph[val]){	
+	path.push_back(nodes);
+	dfs(graph,path,ans);
+	path.pop_back();
+      }
+    }
+  }
+  //BFS
   vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
     vector< vector<int> > ans;
     for(int i : graph[0]){

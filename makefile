@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 435_Non_Overlapping_Intervals.cpp
+	g++ -std=c++14 438_Find_All_Anagrams_In_A_String.cpp
 	./a.out
 
 compwin:
