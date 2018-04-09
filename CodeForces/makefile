@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0268B_Buttons.cpp
+	g++ -std=c++17 0577A_Multiplication_Table.cpp
 	./a.exe
