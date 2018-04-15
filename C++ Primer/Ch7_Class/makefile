@@ -1,5 +1,5 @@
 compile:
-	g++ -std=c++11 E6_54.cpp
+	g++ -std=c++11 E7_2.cpp
 	./a.out
 
 compwin:

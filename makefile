@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 417_Pacific_Atlantic_Water_Flow.cpp
+	g++ -std=c++14 051_N_Queens.cpp
 	./a.out
 
 compwin:

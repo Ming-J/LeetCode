@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 0268B_Buttons.cpp
+	g++ -std=c++14 0556A_Case_Of_The_Zeros_And_Ones.cpp
 	./a.out
 
 compwin:
