@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0579A_Raising_Bacteria.cpp
+	g++ -std=c++17 0474A_Keyboard.cpp
 	./a.exe

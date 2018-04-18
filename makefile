@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 494_Target_Sum.cpp
+	g++ -std=c++17 787_Cheapest_Flights_Within_K_Stops.cpp
 	./a.exe
 
 
