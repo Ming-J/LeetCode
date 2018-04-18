@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 501_Find_Mode_In_Binary_Search_Tree.cpp
+	g++ -std=c++14 787_Cheapest_Flights_Within_K_Stops.cpp
 	./a.out
 
 compwin:

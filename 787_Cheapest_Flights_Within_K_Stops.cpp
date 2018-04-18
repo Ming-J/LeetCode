@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <queue>
 using namespace std;
 
 class Solution {
@@ -9,14 +10,11 @@ public:
 			  int src, int dst, int K) {
       unordered_map<int, vector<pair<int,int> > > info;
       insertFlight(info,flights);
-      for(auto v : info){
-	cout<<v.first;
-	for(auto i : v.second){
-	  cout<<' '<<i.first<<'-'<<i.second;
-	}
-	cout<<endl;
+      vector< vector<int> > bellman(K+1,vector<int>(0,n));
+      for(size_t i = 0; i < bellman[0].size();++i){
+	if(i != src)
       }
-      return 0;
+      return minPrice == INT_MAX ? -1 : minPrice;
     }
 private:
   void insertFlight(unordered_map<int,vector<pair<int,int> > >& info,
@@ -37,7 +35,7 @@ int main(){
   vector<vector<int>> input = {{0,1,100},{1,2,100},{0,2,500}};
   int src = 0;
   int dst = 2;
-  int k = 0;
-  test.findCheapestPrice(n,input,src,dst,k);
+  int k = 1;
+  cout<<test.findCheapestPrice(n,input,src,dst,k)<<endl;
   return 0;
 }
