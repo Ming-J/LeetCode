@@ -2,6 +2,7 @@
 #include <vector>
 #include <unordered_map>
 #include <queue>
+#include <climits>
 using namespace std;
 
 class Solution {
@@ -10,11 +11,37 @@ public:
 			  int src, int dst, int K) {
       unordered_map<int, vector<pair<int,int> > > info;
       insertFlight(info,flights);
-      vector< vector<int> > bellman(K+1,vector<int>(0,n));
+      vector< vector<int> > bellman(K+2,vector<int>(n,INT_MAX));
+      bellman[0][src] = 0;
       for(size_t i = 0; i < bellman[0].size();++i){
-	if(i != src)
+	//if(i != src) bellman[i] = INT_MAX;
       }
-      return minPrice == INT_MAX ? -1 : minPrice;
+      for(size_t i = 1; i < bellman.size(); ++i){
+	for(size_t j = 0; j < bellman[i-1].size();++j){
+	  bellman[i][j] = min(bellman[i-1][j],bellman[i][j]);
+	  if(bellman[i-1][j] != INT_MAX){
+	    int start = bellman[i-1][j];
+	    cout<<"Start:"<<start<<' '<< j<<endl;
+	    if(info.find(j) != info.end()){
+	      for(auto fly : info[j]){
+		cout<<j<<' '<<fly.first<<' '<<fly.second<<endl;
+		int to = fly.first;
+		int newFare = fly.second;
+		bellman[i][to] = min(bellman[i-1][to], bellman[i-1][j] +
+				     newFare);
+	      }
+	    }
+	  }
+	}
+      }
+      for(auto i : bellman){
+	for(auto j: i){
+	  cout<<j<<' ';
+	}
+	cout<<endl;
+      }
+      
+      return bellman[K+1][dst] == INT_MAX ? -1 : bellman[K+1][dst];
     }
 private:
   void insertFlight(unordered_map<int,vector<pair<int,int> > >& info,
