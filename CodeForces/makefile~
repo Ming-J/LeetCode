@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0476A_Dreamoon_And_Stairs.cpp
+	g++ -std=c++17 0474A_Keyboard.cpp
 	./a.exe

@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+  int stairs = 10;
+  int multiple = 2;
+
+  int minSteps = stairs/2 + stairs%2;
+  cout<<minsteps * multiple <<endl;
+  
+
+
+}
