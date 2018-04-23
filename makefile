@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 787_Cheapest_Flights_Within_K_Stops.cpp
+	g++ -std=c++17 802_Find_Eventual_Safe_States.cpp
 	./a.exe
 
 
