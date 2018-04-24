@@ -8,17 +8,34 @@ using namespace std;
 class Solution {
 public:
   vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
-    //0 - unvisited, 1- visiting, 2 - safe, 3 - unsafe
-    vector<int> nodeState(graph.size(),0);
+    vector<int> ans;
+    vector<State> nodeState(graph.size(),UNKNOWN);
+    for(size_t i = 0; i < graph.size(); ++i){
+      if(dfs(nodeState,graph,i) == SAFE){
+	ans.push_back(i);
+      }
+    }
     return ans;
   }
 
 private:
-  void dfs(vector<int>& states, const vector<vector<int> >&g,
-	   int cur){
-    if(states[cur] == 1){
-      states[cur] = 3;
+  enum State {UNKNOWN, VISITING, SAFE, UNSAFE};
+  State dfs(vector<State>& states, const vector<vector<int> >&g,
+	    int cur){
+    //if we enter a node that is visiting, then there is a cycle
+    if(states[cur] == VISITING){
+       return UNSAFE;
     }
-
+    if(states[cur] != UNKNOWN){
+      return states[cur];
+    }
+    states[cur] = VISITING;
+    for(int dst : g[cur]){
+      //Checking all the childrens are unsafe
+      if(dfs(states,g,dst) == UNSAFE){
+	return states[cur] = UNSAFE;
+      }
+    }
+    return states[cur] = SAFE;
   }
 };
