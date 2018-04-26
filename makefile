@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 802_Find_Eventual_Safe_States.cpp
+	g++ -std=c++17 804_Unique_Morse_Code_Words.cpp
 	./a.exe
 
 
