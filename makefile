@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 804_Unique_Morse.cpp
+	g++ -std=c++17 091_Decode_Ways.cpp
 	./a.exe
 
 
