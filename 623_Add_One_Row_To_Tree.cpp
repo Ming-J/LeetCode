@@ -1,44 +1,42 @@
 #include <iostream>
 #include <queue>
+#include <vector>
+#include <unordered_map>
 using namespace std;
 //Definition for a binary tree node.
 struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+  TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
 class Solution {
 public:
   TreeNode* addOneRow(TreeNode* root, int v, int d) {
     if(root==NULL) return NULL;
-    queue<TreeNode*> q;
-    q.push(root);
-    while(!q.empty()){
-      size_t level = q.size();
-      --d;
-      for(size_t i = 0; i < level; ++i){
-	TreeNode* cur = q.front();
-	if(cur->left != NULL){
-	  if(d==0){
-	    TreeNode* addition = new TreeNode(v);
-	    addition->left = cur->left;
-	    cur->left = addition;
-	  }
-	  q.push(cur->left);
-	}
-	if(cur->right != NULL){
-	  if(d==0){
-	    TreeNode* addition = new TreeNode(v);
-	    addition->right = cur->right;
-	    cur->right = addition;
-	  }
-	  q.push(cur->right);
-	}
-	q.pop();
-      }
+    if(d == 1){
+      TreeNode* newLeft = new TreeNode(v);
+      newLeft -> left = root;
+      return newLeft;
+    }else{
+      helper(root,1,v,d);
     }
     return root;
+  }
+
+  void helper(TreeNode* node,int lvl, int v, int d){
+    if(node == NULL) return;
+    if(lvl == d - 1){
+      TreeNode* newLeft = new TreeNode(v);
+      newLeft -> left = node -> left;
+      node -> left = newLeft;
+      TreeNode* newRight = new TreeNode(v);
+      newRight -> right = node -> right;
+      node -> right = newRight;
+      return;
+    }
+    helper(node->left,lvl + 1,v,d);
+    helper(node->right,lvl + 1,v,d);
   }
 };

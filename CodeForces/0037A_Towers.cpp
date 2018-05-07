@@ -12,5 +12,5 @@ int main(){
     cin>>t;
     maxHeight= max(maxHeight,++towers[t]);
   }
-  cout<<maxHeight<<towers.size()<<endl;
+  cout<<maxHeight<<' '<<towers.size()<<endl;
 }
