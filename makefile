@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 802_Find_Eventual_Safe_States.cpp
+	g++ -std=c++14 015_3Sum.cpp
 	./a.out
 
 compwin:
