@@ -3,7 +3,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++11 -D NDEBUG E6_47.cpp
+	g++ -std=c++11 -D NDEBUG E7_31.cpp
 	./a.exe
 
 clean:

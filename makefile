@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 128v2_Longest_Consecutive_Sequence.cpp
+	g++ -std=c++17 018_4Sum.cpp
 	./a.exe
 
 
