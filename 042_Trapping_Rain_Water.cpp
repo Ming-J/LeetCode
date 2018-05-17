@@ -23,7 +23,6 @@ public:
       }
       s.push(make_pair(height[i],i));
     }
-    cout<<"stack|"<<volume<<endl;
     vector<int> maxLeft(height.size(),0);
     vector<int> maxRight(height.size(),0);
     for(int i = 1; i < height.size(); ++i){
@@ -39,20 +38,7 @@ public:
 	sum += minheight - height[i]; 
       }
     }
-    cout<<"arr|"<<sum<<endl;
-    for(int i : height){
-      cout<<i<<' ';
-    }
-    cout<<endl;
-    for(int i : maxLeft){
-      cout<<i<<' ';
-    }
-    cout<<endl;
-    for(int j : maxRight){
-      cout<<j<<' ';
-    }
-    cout<<endl;
-    return 0;
+    return sum;
   }
 };
 

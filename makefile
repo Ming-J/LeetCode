@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 042_Trapping_Rain_Water.cpp
+	g++ -std=c++17 089_Gray_Code.cpp
 	./a.exe
 
 
