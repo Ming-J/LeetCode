@@ -16,17 +16,16 @@ public:
       }
     }
     int single = 0;
-    for(size_t i = bitSize; i < bitSize; --i){
-      single |= holdsBit[i];
-      single<<1;
+    for(size_t i = holdsBit.size() - 1; i < holdsBit.size(); --i){
+      single |= holdsBit[i]%3;
+      if(i != 0) single = single<<1;
     }
-    cout<<single<<endl;
     return single;
   }
 };
 
 int main(){
-  vector<int> input = {2,2,2,20};
+  vector<int> input = {2,2,2,1000000,100,100,100};
   Solution test;
   test.singleNumber(input);
 }
