@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 137_Single_Number_II.cpp
+	g++ -std=c++17 086_Partition_List.cpp
 	./a.exe
 
 
