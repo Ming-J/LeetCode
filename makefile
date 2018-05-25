@@ -10,7 +10,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 086_Partition_List.cpp
+	g++ -std=c++17 Connect_4.cpp
 	./a.exe
 
 
