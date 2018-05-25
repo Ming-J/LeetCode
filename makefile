@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 137_Single_Number_II.cpp
+	g++ -std=c++14 0662v2_Maximum_Width_Of_Binary_Tree.cpp
 	./a.out
 
 compwin:
