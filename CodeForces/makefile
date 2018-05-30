@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0445A_DZY_Loves_Cheeseboard.cpp
+	g++ -std=c++17 0766A_Mahmoud_And_Longest_Uncommon_Subsequence.cpp
 	./a.exe
