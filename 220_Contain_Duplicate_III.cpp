@@ -13,6 +13,8 @@ public:
     for(size_t i = 0; i < nums.size(); ++i){
       auto lo = treeSet.lower_bound(nums[i]);
       auto hi = treeSet.upper_bound(nums[i]);
+      if(lo!=treeSet.end() && *lo == nums[i]) return true;
+      if(lo==treeSet.begin() && abs(*lo - nums[i])<=t) return true;  
       if((lo!=treeSet.end()&&abs(*(--lo)-nums[i])<=t)||
 	 (hi!=treeSet.end()&&abs(*hi-nums[i])<=t)){
 	return true;
