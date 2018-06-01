@@ -6,9 +6,9 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 0580C_Kefa_And_Park.cpp
+	g++ -std=c++14 0580C_Kefa_And_Par.cpp
 	./a.out
 
 compwin:
-	g++ -std=c++17 0766A_Mahmoud_And_Longest_Uncommon_Subsequence.cpp
+	g++ -std=c++17 0461A_Appleman_And_Toastman.cpp
 	./a.exe
