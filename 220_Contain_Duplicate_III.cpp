@@ -11,6 +11,8 @@ public:
     if(nums.size() < 2 || t < 0) return false;
     set<int> treeSet;
     for(size_t i = 0; i < nums.size(); ++i){
+      //Lower_bound: Return an iterator to the first element not less than the given key
+      //Upper_bound: Return an iterator to the first element greater than the given key
       auto lo = treeSet.lower_bound(nums[i]);
       auto hi = treeSet.upper_bound(nums[i]);
       if(lo!=treeSet.end() && *lo == nums[i]) return true;
