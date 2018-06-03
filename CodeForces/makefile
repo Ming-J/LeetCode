@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 0580C_Kefa_And_Par.cpp
+	g++ -std=c++14 0988B_Substring_Sort.cpp
 	./a.out
 
 compwin:
