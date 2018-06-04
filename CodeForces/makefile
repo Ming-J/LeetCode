@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0461A_Appleman_And_Toastman.cpp
+	g++ -std=c++17 0451B_Sort_The_Array.cpp
 	./a.exe
