@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0451B_Sort_The_Array.cpp
+	g++ -std=c++17 0988C_Equal_Sums.cpp
 	./a.exe
