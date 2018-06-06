@@ -1,0 +1,28 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+void contest(vector< pair<int,int> >& student){
+  sort(student.begin(),student.end());
+  vector<int> afterContest(student.size());
+  int rank = 1;
+  afterContest[student[0].second] = rank;
+  for(size_t i = 1; i < student.size(); ++i){
+    if(student[i].first == student[i-1].first) ++rank;
+    afterContest[student[i].second] = rank;
+  }
+  for(size_t i = 0; i < afterContest.size(); ++i){
+    cout<<afterContest[i]<<' ';
+  }
+}
+
+int main(){
+  int n;
+  cin>>n;
+  vector<pair<int> > student(n);
+  for(size_t i = 0; i < student.size(); ++i){
+    int s;
+    cin>>s;
+    student[i] = make_pair(s,i);
+  }
+}
