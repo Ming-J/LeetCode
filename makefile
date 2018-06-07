@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 721_Accounts_Merge.cpp
+	g++ -std=c++14 133_Clone_Graph.cpp
 	./a.out
 
 compwin:
