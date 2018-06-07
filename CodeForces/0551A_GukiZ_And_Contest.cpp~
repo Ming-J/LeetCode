@@ -1,14 +1,15 @@
 #include <iostream>
+#include <vector>
 #include <algorithm>
 using namespace std;
 
 void contest(vector< pair<int,int> >& student){
-  sort(student.begin(),student.end());
+  sort(student.begin(),student.end(),greater<pair<int,int> >());
   vector<int> afterContest(student.size());
   int rank = 1;
   afterContest[student[0].second] = rank;
   for(size_t i = 1; i < student.size(); ++i){
-    if(student[i].first == student[i-1].first) ++rank;
+    if(student[i].first != student[i-1].first) ++rank;
     afterContest[student[i].second] = rank;
   }
   for(size_t i = 0; i < afterContest.size(); ++i){
@@ -19,10 +20,11 @@ void contest(vector< pair<int,int> >& student){
 int main(){
   int n;
   cin>>n;
-  vector<pair<int> > student(n);
+  vector<pair<int,int> > student(n);
   for(size_t i = 0; i < student.size(); ++i){
     int s;
     cin>>s;
     student[i] = make_pair(s,i);
   }
+  contest(student);
 }

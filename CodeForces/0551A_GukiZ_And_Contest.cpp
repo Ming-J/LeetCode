@@ -9,8 +9,11 @@ void contest(vector< pair<int,int> >& student){
   int rank = 1;
   afterContest[student[0].second] = rank;
   for(size_t i = 1; i < student.size(); ++i){
-    if(student[i].first != student[i-1].first) ++rank;
-    afterContest[student[i].second] = rank;
+    if(student[i].first == student[i-1].first){ 
+      afterContest[student[i].second] = afterContest[student[i-1].second];
+    }else{
+      afterContest[student[i].second] = i+1;
+    }
   }
   for(size_t i = 0; i < afterContest.size(); ++i){
     cout<<afterContest[i]<<' ';
