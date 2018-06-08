@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0043A_Football.cpp
+	g++ -std=c++17 0439A_Devu_The_singer.cpp
 	./a.exe
