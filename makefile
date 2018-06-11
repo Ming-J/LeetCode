@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 133_Clone_Graph.cpp
+	g++ -std=c++14 547_Friend_Circles.cpp
 	./a.out
 
 compwin:
