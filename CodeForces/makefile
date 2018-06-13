@@ -6,9 +6,9 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 0919A_Supermarket.cpp
+	g++ -std=c++14 0768A_Oath_Of_The_Nights_Watc.cpp
 	./a.out
 
 compwin:
-	g++ -std=c++17 0439A_Devu_The_singer.cpp
+	g++ -std=c++17 0761A_Dasha_And_Stairs.cpp
 	./a.exe
