@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 547_Friend_Circles.cpp
+	g++ -std=c++14 637_Average_Of_Levels_In_Binary_Tree.cpp
 	./a.out
 
 compwin:

@@ -1,0 +1,32 @@
+/*
+  Tech n subjects, ith subject has c chapters. 
+  His pre chapter learning power of a subject is x hours.
+  x decrease by 1 every subject, can not smaller than 1
+  min time to understand all subjectt
+*/
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main(){
+  //inputs
+  int sub, lpc;
+  cin>>subjects>>lpc;
+  vector<int> chapters(sub);
+  for(auto c : chapters) cin>>c;
+
+  //sort array in decending order
+  sort(chapters.begin(),chapters.end(),greater<int>);
+
+  //traverse the array, and obtain the time needed for each subject
+  //as well as decreasing
+  long hours = 0;
+  auto func = [&](int i){
+    hours += i * lpc;
+    if(lpc > 1) --lpc;
+  };
+  for_each(chapters.begin(),chapter.end(),func);
+  cout<<hours<<endl;
+}
