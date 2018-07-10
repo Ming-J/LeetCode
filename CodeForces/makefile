@@ -6,7 +6,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++14 0742A_Arpa_Hard_Exam_And_Mehrdad.cpp
+	g++ -std=c++14 0237A_Free_Cash.cpp
 	./a.out
 
 compwin:
