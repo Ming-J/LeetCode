@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 002_Add_Two_Number_v2.cpp
+	g++ -std=c++14 792_Number_Of_Matching_Subsequences.cpp
 	./a.out
 
 compwin:
