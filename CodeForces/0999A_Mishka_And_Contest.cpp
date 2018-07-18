@@ -1,24 +1,26 @@
 #include <iostream>
-#include <deque>
+#include <queue>
 using namespace std;
-
+/*
+  n Problems = K
+*/
 int main(){
   int n, k;
   cin>>n>>k;
-  deque<int> dq;
+  deque<int> q;
   for(int i = 0; i < n; ++i){
     int t;
     cin>>t;
-    dp.push_back(t);
+    q.push_back(t);
   }
-  int sloved = 0;
-  while(!dq.empty()&&dq.front() <= k){
-    ++sloved;
-    dp.pop_front();
+  int count = 0;
+  while(!q.empty()&&(q.front()<=k||q.back()<=k)){
+    if(q.front()<=k){
+      q.pop_front();
+    }else{
+      q.pop_back();
+    }
+    ++count;
   }
-  while(!dq.empty()&&dq.back() <= k){
-    ++sloved;
-    dp.pop_front();
-  }
-  
+  cout<<count<<endl;
 }
