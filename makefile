@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 792_Number_Of_Matching_Subsequences.cpp
+	g++ -std=c++14 012_Integer_To_Roman.cpp
 	./a.out
 
 compwin:

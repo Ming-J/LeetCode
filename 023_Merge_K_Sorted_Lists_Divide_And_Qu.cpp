@@ -9,10 +9,15 @@ struct ListNode {
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-      ListNode* ans = NULL;
-      auto func = [&ans,this](ListNode* i){ ans = mergeTwoLists(ans,i);};
-      for_each(lists.begin(),lists.end(),func);
-      return ans;
+      int range = lists.size();
+      int interval = 1;
+      while(interval < range){
+	for(size_t i = 0; i < (range - interval); i += interval*2){
+	  lists[i] = mergeTwoLists(lists[i], lists[i+interval]);
+	}
+	interval *= 2;
+      }
+      return (range != 0)? lists[0] : NULL;
     }
   
 private:

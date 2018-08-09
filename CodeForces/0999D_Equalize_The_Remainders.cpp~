@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main(){
+  int n, m;
+  cin>>n>>m;
+  vector<int> input(n);
+  for(auto& t : input) cin>>t;
+
+  vector<int> remainder(m);
+  auto func = [&remainder](int n){
+    ++remainder[n%remainder.size()];
+  };
+  for_each(input.begin(),input.end(),func);
+  int count = 0;
+  int prev = 0;
+  auto calCount = [&count,&prev,int eq = n/m](int n){
+    n += prev;
+    prev = (n > eq)? eq - n : 0;
+    count += prev
+  };
+  for_each(remainder.begin(),remainder.end(),calCount);
+  return count;
+}
