@@ -14,15 +14,24 @@ public:
       ++wordsCount[w];
     }
     for(int i = 0; i < s.size(); ++i){
+      unordered_map<string,int> indexCheck(wordsCount);
       for(int j = i; j < s.size(); j += wordSize){
-	cout<<s.substr(j,j+wordSize());
+	string sub = s.substr(j,wordSize);
+	if(indexCheck.find(sub) != indexCheck.end()){
+	  if(--indexCheck[sub] == 0) indexCheck.erase(sub);
+	}else break;
+	//cout<<s.substr(j,wordSize)<<endl;
       }
+      if(indexCheck.empty() == 0) res.push_back(i);
+      //cout<<endl;
     }
     return res;
   }
 };
 
 int main(){
-  
-
+  Solution test;
+  string input = "barfoothefoobarman";
+  vector<string> arr = {"foo","bar"};
+  test.findSubstring(input,arr);
 }
