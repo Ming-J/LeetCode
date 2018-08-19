@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 012_Integer_To_Roman.cpp
+	g++ -std=c++14 030_Substring_With_Concatenation_Of_All_Words.cpp
 	./a.out
 
 compwin:
