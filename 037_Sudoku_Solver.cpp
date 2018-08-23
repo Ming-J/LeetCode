@@ -10,13 +10,6 @@ public:
 
   bool backTrack(vector<vector<char> >& board){
     for(size_t i = 0; i < board.size(); ++i){
-        for(size_t j = 0; j < board[i].size(); ++j){
-            cout<<board[i][j];   
-        }
-        cout<<endl;
-    }
-    cout<<endl;
-    for(size_t i = 0; i < board.size(); ++i){
       for(size_t j = 0; j < board[i].size(); ++j){
 	if(board[i][j] == '.'){
 	  for(int k = 1; k < 10; ++k){
@@ -39,14 +32,7 @@ public:
   }
 
 private:
-  void hintBoard(vector<vector<char> > & board,
-		 vector<vector<bool> >& hints){
-    for(size_t i = 0; i < board.size(); ++i){
-      for(size_t j = 0; j < board[i].size(); ++j){
-	hints[i][j] = (board[i][j]=='.')?false:true;
-      }
-    }
-  }
+  
   bool checkRow(vector<vector<char> >& board, int c, int r,int val){
     for(char i :  board[r]){
       if(i!='.' && i-'0' == val)
@@ -57,7 +43,7 @@ private:
   
   bool checkCol(vector<vector<char> >& board, int c, int r, int val){
     for(vector<char> arr :  board){
-      if(arr[r]!='.' && arr[r] - '0' == val)
+      if(arr[c]!='.' && arr[c] - '0' == val)
 	return false; 
       }
     return true;
@@ -104,5 +90,12 @@ int main(){
 			       {'.','.','.','.','8','.','.','7','9'}};
   Solution test;
   test.solveSudoku(board);
-
+  cout<<"Slove"<<endl;
+  for(size_t i = 0; i < board.size(); ++i){
+    for(size_t j = 0; j < board[i].size(); ++j){
+      cout<<board[i][j];   
+    }
+    cout<<endl;
+  }
+  cout<<endl;
 }

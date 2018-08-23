@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 030_Substring_With_Concatenation_Of_All_Words.cpp
+	g++ -std=c++14 037_Sudoku_Solver.cpp
 	./a.out
 
 compwin:
