@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 030_Substring_With_Concatenation_Of_All_Words.cpp
+	g++ -std=c++17 037_Sudoku_Solver.cpp
 	./a.exe
 
 

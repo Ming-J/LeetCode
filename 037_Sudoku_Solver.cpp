@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution {
@@ -9,13 +10,20 @@ public:
 
   bool backTrack(vector<vector<char> >& board){
     for(size_t i = 0; i < board.size(); ++i){
+        for(size_t j = 0; j < board[i].size(); ++j){
+            cout<<board[i][j];   
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    for(size_t i = 0; i < board.size(); ++i){
       for(size_t j = 0; j < board[i].size(); ++j){
 	if(board[i][j] == '.'){
-	  for(int k = 0; k < 10; ++k){
+	  for(int k = 1; k < 10; ++k){
 	    if(checkRow(board,j,i,k)
 	       &&checkCol(board,j,i,k)
 	       &&checkBox(board,j,i,k)){
-	      board[i][j] = k+'0';
+	      board[i][j] = k + '0';
 	      if(backTrack(board)){
 		return true;
 	      }else{
@@ -29,8 +37,6 @@ public:
     }
     return true;
   }
-  
-
 
 private:
   void hintBoard(vector<vector<char> > & board,
@@ -45,7 +51,7 @@ private:
     for(char i :  board[r]){
       if(i!='.' && i-'0' == val)
 	return false; 
-      }
+    }
     return true;
   }
   
@@ -84,3 +90,19 @@ private:
   }
 
 };
+
+
+int main(){
+  vector<vector<char> > board={{'5','3','.','.','7','.','.','.','.'},
+			       {'6','.','.','1','9','5','.','.','.'},
+			       {'.','9','8','.','.','.','.','6','.'},
+			       {'8','.','.','.','6','.','.','.','3'},
+			       {'4','.','.','8','.','3','.','.','1'},
+			       {'7','.','.','.','2','.','.','.','6'},
+			       {'.','6','.','.','.','.','2','8','.'},
+			       {'.','.','.','4','1','9','.','.','5'},
+			       {'.','.','.','.','8','.','.','7','9'}};
+  Solution test;
+  test.solveSudoku(board);
+
+}
