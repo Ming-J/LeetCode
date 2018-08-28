@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 037_Sudoku_Solver.cpp
+	g++ -std=c++17 045_Jump_Game_II.cpp
 	./a.exe
 
 
