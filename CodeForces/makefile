@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0514A_Chewbacca_And_Number.cpp
+	g++ -std=c++17 0001B_Spreadsheets.cpp
 	./a.exe

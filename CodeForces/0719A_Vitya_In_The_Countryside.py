@@ -8,10 +8,12 @@ def main():
     n = int(sys.stdin.readline())
     moon = [int(x) for x in sys.stdin.readline().split()]
     if n is 1:
-        if moon[0] != 15:
-            print(-1)
-        else:
+        if moon[0] == 15:
             print("DOWN")
+        elif moon[0] == 0:
+            print("UP")
+        else:
+            print(-1)
     else:
         last1 = moon[n-1]
         last2 = moon[n-2]
