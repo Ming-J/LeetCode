@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 045_Jump_Game_II.cpp
+	g++ -std=c++17 052_N_Queens_II.cpp
 	./a.exe
 
 
