@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 052_N_Queens_II.cpp
+	g++ -std=c++17 064_Minimum_Path_Sum.cpp
 	./a.exe
 
 
