@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 064_Minimum_Path_Sum.cpp
+	g++ -std=c++17 071_Simplify_Path2.cpp
 	./a.exe
 
 
