@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 071_Simplify_Path.cpp
+	g++ -std=c++14 076_Minimum_Window_Substring.cpp
 	./a.out
 
 compwin:
