@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0721B_Passwords.cpp
+	g++ -std=c++17 0988A_Diverse_Team.cpp
 	./a.exe
