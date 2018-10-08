@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 131_Palindrome_Partitioning.cpp
+	g++ -std=c++14 065_Valid_Number.cpp
 	./a.out
 
 compwin:
