@@ -10,5 +10,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0002A_Wnner.cpp
+	g++ -std=c++17 0977B_Two_Gram.cpp
 	./a.exe
