@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++14 208_Implement_Trie.cpp
+	g++ -std=c++17 GS_Reverse_Equation.cpp
 	./a.out
 
 compwin:
