@@ -1,5 +1,6 @@
 
 clean:
+
 	rm *.*~ *.out makefile~
 
 cleanwin:
@@ -10,5 +11,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0977B_Two_Gram.cpp
+	g++ -std=c++17 0913B_Christmas_Spruce.cpp
 	./a.exe
