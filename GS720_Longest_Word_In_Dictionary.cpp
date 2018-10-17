@@ -10,6 +10,9 @@ struct TrieNode{
   TrieNode(char c,bool w):c(c),isWord(w){
     children.assign(26, NULL);
   };
+  ~TrieNode(){
+    for(auto node : children) delete node;
+  }
 };
 
 class Tries{
@@ -17,7 +20,7 @@ public:
   Tries(){
     root = new TrieNode(0,false);
   }
-
+  
   void insert(string word){
     TrieNode* cur = root;
     for(size_t i = 0; i < word.size(); ++i){
@@ -54,8 +57,6 @@ private:
   TrieNode* root;
 };
   
-
-
 class Solution {
 public:
   string longestWord(vector<string>& words) {
