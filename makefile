@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 GS49_Group_Anagrams.cpp
+	g++ -std=c++17 GS720_Longest_Word_In_Dictionary.cpp
 	./a.out
 
 compwin:
