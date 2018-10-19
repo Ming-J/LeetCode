@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+class Sequence{
+public:
+  Sequence(){
+
+  }
+
+private:
+  vector<int> 
+}
+
+
+int main(){
+  
+}
