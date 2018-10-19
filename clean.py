@@ -9,6 +9,7 @@ def getfile(path):
             if (filename.endswith("~")
                 or filename.endswith(".exe")
                 or filename.endswith(".out")
+                or filename.endswith("#")
                 or filename.endswith(".stackdump")):
                 print(filename)
                 os.remove(path+"/"+filename)
