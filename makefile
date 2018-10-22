@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 071_Simplify_Path2.cpp
+	g++ -std=c++17 096_Unique_Binary_Search_Trees.cpp
 	./a.exe
 
 
