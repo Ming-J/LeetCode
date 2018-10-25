@@ -11,5 +11,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0650A_Watchmen.cpp
+	g++ -std=c++17 1006C_ThreeParts_Of_The_Array.cpp
 	./a.exe

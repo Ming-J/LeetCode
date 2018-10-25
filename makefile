@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 096_Unique_Binary_Search_Trees.cpp
+	g++ -std=c++17 GS146_LRU_Cache.cpp
 	./a.exe
 
 
