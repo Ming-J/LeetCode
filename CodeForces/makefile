@@ -11,5 +11,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 1006C_ThreeParts_Of_The_Array.cpp
+	g++ -std=c++17 0501B_Misha_And_Changing_Handles.cpp
 	./a.exe

@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 GS146_LRU_Cache.cpp
+	g++ -std=c++17 565_Array_Nesting.cpp
 	./a.exe
 
 
