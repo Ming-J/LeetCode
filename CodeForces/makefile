@@ -7,7 +7,7 @@ cleanwin:
 	rm *.*~ *.exe a.exe.stackdump makefile~
 
 compile:
-	g++ -std=c++17 0217A_Ice_Skating.cpp
+	g++ -std=c++17 0285C_Building_Permutation.cpp
 	./a.out
 
 compwin:

@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 GS720_Longest_Word_In_Dictionary.cpp
+	g++ -std=c++17 20_Valid_Parentheres.cpp
 	./a.out
 
 compwin:
