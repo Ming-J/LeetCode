@@ -11,5 +11,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0546C_Soldier_And_Cards.cpp
+	g++ -std=c++17 0433B_Kuriyama_Mirais_Stones.cpp
 	./a.exe

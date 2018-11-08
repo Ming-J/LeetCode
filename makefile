@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 565_Array_Nesting.cpp
+	g++ -std=c++17 Gamit.cpp
 	./a.exe
 
 
