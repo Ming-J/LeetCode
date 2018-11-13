@@ -11,7 +11,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 Gamit.cpp
+	g++ -std=c++17 886_Possible_Bipartition.cpp
 	./a.exe
 
 

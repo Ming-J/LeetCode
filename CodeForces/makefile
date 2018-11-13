@@ -11,5 +11,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0433B_Kuriyama_Mirais_Stones.cpp
+	g++ -std=c++17 0559B_Equivalent_Strings.cpp
 	./a.exe
