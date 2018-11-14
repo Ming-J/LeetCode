@@ -1,3 +1,3 @@
 All:
-	g++ Exe3.cpp
-	./a.exe
+	g++ 8.1_Triple_Step.cpp
+	./a.out

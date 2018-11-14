@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 20_Valid_Parentheres.cpp
+	g++ -std=c++17 300_Longest_Increasing_Subsequence.cpp
 	./a.out
 
 compwin:
