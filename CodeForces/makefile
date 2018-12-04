@@ -11,5 +11,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 0559B_Equivalent_Strings.cpp
+	g++ -std=c++17 1063A_Oh_Those_Palindromes.cpp
 	./a.exe
