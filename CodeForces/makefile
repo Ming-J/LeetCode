@@ -11,5 +11,5 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 1063A_Oh_Those_Palindromes.cpp
+	g++ -std=c++17 0276C_Little_Girl_And_Maximum_Sum.cpp
 	./a.exe
