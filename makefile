@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 300_Longest_Increasing_Subsequence.cpp
+	g++ -std=c++17 953_Verifying_An_Alien_Dictionary.cpp
 	./a.out
 
 compwin:
