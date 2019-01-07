@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 953_Verifying_An_Alien_Dictionary.cpp
+	g++ -std=c++17 969_Pancake_Sorting.cpp
 	./a.out
 
 compwin:
