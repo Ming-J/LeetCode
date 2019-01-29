@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 969_Pancake_Sorting.cpp
+	g++ -std=c++17 0981_Time_Based_Key_Value_Store.cpp
 	./a.out
 
 compwin:
