@@ -19,7 +19,12 @@
         "map": "cpp",
         "algorithm": "cpp",
         "list": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "utility": "cpp",
+        "ostream": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "cmath": "cpp"
     },
     "python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe"
 }

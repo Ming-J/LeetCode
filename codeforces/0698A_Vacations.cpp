@@ -1,4 +1,6 @@
+#include <algorithm>
 #include <iostream>
+#include <numeric>
 #include <vector>
 using namespace std;
 /*
@@ -7,51 +9,30 @@ using namespace std;
   2: gym is open, contest is not open
   3: gym open, contest open
   if 0 is R
-  
+
   1 3 2 0
   C G R R
 */
 
-
-int main(){
-  int t;
-  cin>>t;
-  vector<int> activity(t,0);
-  for(size_t i = 0; i < activity.size(); ++i){
-    cin>>t;
-    activity[i] = t;
-  }
-  vector<char> task(activity.size(),0);
-  for( size_t i = 0; i < activity.size(); ++i){
-    if( activity[i] == 0 ){
-      task[i] = 'R';
-    }else if (activity[i] == 1){
-      if( i > 0 and task[i-1] == 'C'){
-	task[i] = 'R';
-      }else{
-	task[i] = 'C';
-      }
-    }else if( activity[i] == 2){
-      if( i > 0 and task[i-1] == 'G'){
-	task[i] = 'R';
-      }else{
-	task[i] = 'G';
-      }
-    }else{
-      if( i > 0 and task[i-1] == 'G'){
-	task[i] = 'C';
-      }else if( i > 0 and task[i-1] == 'C'){
-	task[i] = 'G';
-      }else{
-	task[i] = 'C';
-      }
+int main() {
+    int n;
+    cin >> n;
+    vector<vector<int>> dp(3, vector<int>(n + 1, numeric_limits<int>::max()));
+    dp[0][0] = 0;
+    // dp[0][] rest   dp[1][] gym   dp[2][] contest
+    for (size_t i = 1; i <= n; ++i) {
+        int t;
+        cin >> t;
+        dp[0][i] = min(dp[0][i - 1], min(dp[1][i - 1], dp[2][i - 1])) + 1;
+        if (t == 1) // contest is open
+            dp[2][i] = min(dp[0][i - 1], dp[1][i - 1]);
+        if (t == 2) // gym is open
+            dp[1][i] = min(dp[0][i - 1], dp[2][i - 1]);
+        if (t == 3) { // contest is open,, gym is open
+            dp[2][i] = min(dp[0][i - 1], dp[1][i - 1]);
+            dp[1][i] = min(dp[0][i - 1], dp[2][i - 1]);
+        }
     }
-  }
-  int count = 0;
-  for(char c : task){
-    //cout<<c<<' ';
-    if( c == 'R') count++;
-  }
-  cout<<count<<endl;
-  return 0;
+    cout << min(dp[0][n], min(dp[1][n], dp[2][n])) << endl;
+    return 0;
 }
