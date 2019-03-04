@@ -24,7 +24,9 @@
         "ostream": "cpp",
         "set": "cpp",
         "string": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "unordered_map": "cpp",
+        "xhash": "cpp"
     },
     "python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe"
 }
