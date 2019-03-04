@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 0981_Time_Based_Key_Value_Store.cpp
+	g++ -std=c++17 1003_Check_Word_Valid_Substitutions.cpp
 	./a.out
 
 compwin:
