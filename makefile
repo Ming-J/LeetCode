@@ -7,7 +7,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 1003_Check_Word_Valid_Substitutions.cpp
+	g++ -std=c++17 0424_Longest_Repeating_Character_Replacement.cpp
 	./a.out
 
 compwin:
