@@ -1,4 +1,5 @@
 
+
 clean:
 	rm *.*~ *.out makefile~
 
@@ -11,7 +12,7 @@ compile:
 	./a.out
 
 compwin:
-	g++ -std=c++17 886_Possible_Bipartition.cpp
+	clang-cl -std=c++1z 886_Possible_Bipartition.cpp -o a.exe
 	./a.exe
 
 
