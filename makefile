@@ -8,7 +8,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 0424_Longest_Repeating_Character_Replacement.cpp
+	g++ -std=c++17 1006_Clumsy_Factorial.cpp
 	./a.out
 
 compwin:
