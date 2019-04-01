@@ -8,7 +8,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 1006_Clumsy_Factorial.cpp
+	g++ -std=c++17 1008_Construct_BST_Preorder.cpp
 	./a.out
 
 compwin:
