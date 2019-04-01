@@ -8,7 +8,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 1008_Construct_BST_Preorder.cpp
+	g++ -std=c++17 1009_Complement_Of_Base_10_Integer.cpp
 	./a.out
 
 compwin:
