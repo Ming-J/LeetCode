@@ -12,7 +12,8 @@ compile:
 	./a.out
 
 compwin:
-	clang-cl -std=c++1z 886_Possible_Bipartition.cpp -o a.exe
+	py clean.py
+	clang-cl -Xclang -std=c++17 AD0001_StronglyConnected.cpp -o a.exe
 	./a.exe
 
 
