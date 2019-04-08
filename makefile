@@ -8,7 +8,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 1009_Complement_Of_Base_10_Integer.cpp
+	g++ -std=c++17 1011_Capacity_To_Ship_Packages_Within_D_Days.cpp
 	./a.out
 
 compwin:
