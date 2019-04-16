@@ -8,7 +8,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 1013_Partition_Array_Into_Three_Part.cpp
+	g++ -std=c++17 1017_Convert_To_Base_-2.cpp
 	./a.out
 
 compwin:
