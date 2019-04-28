@@ -8,7 +8,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 0148_Sort_List_Bottom_Up.cpp
+	g++ -std=c++17 3n+1.cpp
 	./a.out
 
 compwin:
