@@ -8,12 +8,12 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 0148_Sort_List_Bottom_Up.cpp
+	g++ -std=c++17 1032_Stream_Of_Characters.cpp
 	./a.out
 
 compwin:
 	py clean.py
-	clang-cl -Xclang -std=c++17 1010_Pairs_Of_Songs_With_Total_Durations_Divisible_By_60.cpp -o a.exe
+	clang-cl -Xclang -std=c++17 1032_Stream_Of_Characters.cpp -o a.exe
 	./a.exe
 
 
