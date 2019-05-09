@@ -13,7 +13,7 @@ compile:
 
 compwin:
 	py clean.py
-	clang-cl -Xclang -std=c++17 1032_Stream_Of_Characters.cpp -o a.exe
+	clang-cl -Xclang -std=c++17 Longest_common_Subsequence.cpp -o a.exe
 	./a.exe
 
 
