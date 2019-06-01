@@ -13,7 +13,7 @@ compile:
 
 compwin:
 	py clean.py
-	clang-cl -Xclang -std=c++17 Longest_common_Subsequence.cpp -o a.exe
+	clang-cl -Xclang -std=c++17 1048_Longest_String_Chain.cpp -o a.exe
 	./a.exe
 
 
