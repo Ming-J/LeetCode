@@ -8,7 +8,7 @@ cleanwin:
 	rm ./CodeForces/*.*~ ./CodeForces/*.exe ./CodeForces/a.exe.stackdump ./CodeForces/makefile~
 
 compile:
-	g++ -std=c++17 0211_Add_And_Search_Word.cpp
+	g++ -std=c++17 1071_Greatest_Common_Divisor_Of_Strings.cpp
 	./a.out
 
 compwin:
