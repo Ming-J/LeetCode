@@ -11,7 +11,9 @@ Right-mid
   hi = mid - 1
 ```
 <h1>Detecting Cycle</h1>
-dfs
+
+dfs way of checking
+
 ```python
 def dfs( node ):
   # node are in our current path, cycle detected
