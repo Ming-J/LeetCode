@@ -12,7 +12,7 @@ Right-mid
 ```
 <h1>Detecting Cycle</h1>
 dfs
-``` python
+```python
 def dfs( node ):
   # node are in our current path, cycle detected
   if visited[node] == 2: return False
