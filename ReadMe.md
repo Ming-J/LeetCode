@@ -32,7 +32,7 @@ def dfs( node ):
 <h1>BitMask</h1>
 
 
-'''python
+```python
 #Same as getting all permutation of N value
 for mask in range(1 << N):
   print(mask, bin(mask))
@@ -40,4 +40,4 @@ for mask in range(1 << N):
 #Going through the Binary and see which index is in our creent permutation
 for x in range(N):
   print("\t", ((mask >> x) & 1))
-'''
+```
