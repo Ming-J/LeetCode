@@ -41,3 +41,24 @@ for mask in range(1 << N):
 for x in range(N):
   print("\t", ((mask >> x) & 1))
 ```
+
+<h1>Binary Index Tree</h1>
+
+```python
+class bit():
+  def __init__(self):
+    self.size = (10**5) + 1
+    self.arr = [0] * self.size
+  def prefix_sum(self, idx):
+    res = 0
+    while idx > 0:
+      res += self.arr[idx]
+      idx -= idx & -idx
+    return res
+  def increase(self, idx, delta):
+    while idx <= self.size:
+      self.arr[idx] += delta
+      idx += idx & -idx
+  def range_sum(self, l, r): 
+    return self.prefix_sum(r) - self.prefix_sum(l - 1);
+```
