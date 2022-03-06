@@ -62,3 +62,34 @@ class bit():
   def range_sum(self, l, r): 
     return self.prefix_sum(r) - self.prefix_sum(l - 1);
 ```
+
+<hi>KMP</h1>
+```python
+def strStr(self, haystack: str, needle: str) -> int:
+    if needle == "": return 0
+    if haystack == "": return -1
+    suffix = self.suffix_array(needle, len(needle))
+    kmp = [0] * len(haystack)
+    kmp[0] = 1 if haystack[0] == needle[0] else 0
+    if len(needle) == 1 and kmp[0] == 1:
+        return 0
+    for i in range(1,len(haystack)):
+        j = kmp[i-1]
+        while j > 0 and haystack[i] != needle[j]:
+            j = suffix[j-1]
+        if haystack[i] == needle[j]:
+            kmp[i] = j + 1
+        if kmp[i] == len(needle):
+            return i - len(needle) + 1
+    return -1
+
+def suffix_array(self, needle, size):
+    suffix = [0] * size
+    for i in range(1, size):
+        j = suffix[i-1]
+        while j > 0 and needle[i] != needle[j]:
+            j = suffix[j-1]
+        if needle[i] == needle[j]:
+            suffix[i] = j + 1
+    return suffix        
+```
