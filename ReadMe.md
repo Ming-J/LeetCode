@@ -83,6 +83,9 @@ def strStr(self, haystack: str, needle: str) -> int:
             return i - len(needle) + 1
     return -1
 
+# The maximum length k so that p[0:k-1] = p [p-k+1:i]
+# https://github.com/wisdompeak/LeetCode/tree/master/String/1392.Longest-Happy-Prefix
+# https://github.com/wisdompeak/LeetCode/tree/master/String/028.Implement-strStr
 def suffix_array(self, needle, size):
     suffix = [0] * size
     for i in range(1, size):
